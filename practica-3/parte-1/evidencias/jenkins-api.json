@@ -1,0 +1,226 @@
+{
+  "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+  "actions": [
+    {
+      "_class": "hudson.model.ParametersAction",
+      "parameters": [
+        {
+          "_class": "hudson.model.BooleanParameterValue",
+          "name": "ANALIZAR_SONAR",
+          "value": true
+        }
+      ]
+    },
+    {
+      "_class": "hudson.model.CauseAction"
+    },
+    {
+      "_class": "org.jenkinsci.plugins.workflow.libs.LibrariesAction"
+    },
+    {},
+    {
+      "_class": "hudson.plugins.git.util.BuildData",
+      "lastBuiltRevision": {
+        "SHA1": "69ca27b6c12882f56fbcae675000207c29aa861e"
+      }
+    },
+    {},
+    {
+      "_class": "hudson.tasks.junit.TestResultAction"
+    },
+    {},
+    {},
+    {
+      "_class": "hudson.plugins.sonar.action.SonarAnalysisAction"
+    },
+    {},
+    {},
+    {
+      "_class": "hudson.plugins.sonar.action.SonarBuildBadgeAction"
+    },
+    {},
+    {},
+    {
+      "_class": "org.jenkinsci.plugins.displayurlapi.actions.RunDisplayAction"
+    },
+    {
+      "_class": "org.jenkinsci.plugins.pipeline.modeldefinition.actions.RestartDeclarativePipelineAction"
+    },
+    {},
+    {
+      "_class": "org.jenkinsci.plugins.workflow.job.views.FlowGraphAction"
+    },
+    {},
+    {}
+  ],
+  "artifacts": [
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/Ejercicio5MyAPIGestor-0.0.1-SNAPSHOT.jar"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/com.mx.cbtis.gestor/Ejercicio5MyApiGestorApplication.html"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/com.mx.cbtis.gestor/Ejercicio5MyApiGestorApplication.java.html"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/com.mx.cbtis.gestor/index.html"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/com.mx.cbtis.gestor/index.source.html"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/com.mx.cbtis.gestor.controller/AsignacionesController.html"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/com.mx.cbtis.gestor.controller/AsignacionesController.java.html"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/com.mx.cbtis.gestor.controller/ComentariosController.html"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/com.mx.cbtis.gestor.controller/ComentariosController.java.html"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/com.mx.cbtis.gestor.controller/index.html"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/com.mx.cbtis.gestor.controller/index.source.html"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/com.mx.cbtis.gestor.controller/ProyectosController.html"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/com.mx.cbtis.gestor.controller/ProyectosController.java.html"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/com.mx.cbtis.gestor.controller/TareasController.html"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/com.mx.cbtis.gestor.controller/TareasController.java.html"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/com.mx.cbtis.gestor.controller/UsuarioController.html"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/com.mx.cbtis.gestor.controller/UsuarioController.java.html"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/com.mx.cbtis.gestor.modelo/Asignaciones.html"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/com.mx.cbtis.gestor.modelo/Asignaciones.java.html"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/com.mx.cbtis.gestor.modelo/Comentarios.html"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/com.mx.cbtis.gestor.modelo/Comentarios.java.html"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/com.mx.cbtis.gestor.modelo/index.html"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/com.mx.cbtis.gestor.modelo/index.source.html"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/com.mx.cbtis.gestor.modelo/Proyectos.html"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/com.mx.cbtis.gestor.modelo/Proyectos.java.html"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/com.mx.cbtis.gestor.modelo/Tareas.html"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/com.mx.cbtis.gestor.modelo/Tareas.java.html"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/com.mx.cbtis.gestor.modelo/Usuario.html"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/com.mx.cbtis.gestor.modelo/Usuario.java.html"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/index.html"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/jacoco-resources/branchfc.gif"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/jacoco-resources/branchnc.gif"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/jacoco-resources/branchpc.gif"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/jacoco-resources/bundle.gif"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/jacoco-resources/class.gif"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/jacoco-resources/down.gif"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/jacoco-resources/greenbar.gif"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/jacoco-resources/group.gif"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/jacoco-resources/method.gif"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/jacoco-resources/package.gif"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/jacoco-resources/prettify.css"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/jacoco-resources/prettify.js"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/jacoco-resources/redbar.gif"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/jacoco-resources/report.css"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/jacoco-resources/report.gif"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/jacoco-resources/session.gif"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/jacoco-resources/sort.gif"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/jacoco-resources/sort.js"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/jacoco-resources/source.gif"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/jacoco-resources/up.gif"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/jacoco-sessions.html"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/jacoco.csv"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/site/jacoco/jacoco.xml"
+    },
+    {
+      "relativePath": "Ejercicio5MyAPIGestor/target/surefire-reports/TEST-com.mx.cbtis.gestor.controller.ProyectosControllerTests.xml"
+    }
+  ],
+  "building": false,
+  "duration": 547040,
+  "number": 2,
+  "result": "SUCCESS",
+  "timestamp": 1794114037213,
+  "url": "http://localhost:8090/job/Unidad2-API/2/"
+}

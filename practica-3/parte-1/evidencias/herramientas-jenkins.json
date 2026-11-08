@@ -1,0 +1,19 @@
+{
+  "jenkinsVersion": "2.541.3",
+  "javaVersion": "21.0.9",
+  "javaHome": "/opt/java/openjdk",
+  "jdks": [
+    {
+      "name": "JDK21",
+      "home": "/opt/java/openjdk"
+    }
+  ],
+  "maven": [
+    {
+      "name": "Maven3",
+      "installers": [
+        "3.9.9"
+      ]
+    }
+  ]
+}

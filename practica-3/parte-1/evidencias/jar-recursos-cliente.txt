@@ -1,0 +1,5 @@
+60740717 Sun Nov 08 05:14:54 UTC 2026 BOOT-INF/classes/static/Images/hola.gif
+52640430 Sun Nov 08 05:14:56 UTC 2026 BOOT-INF/classes/static/Images/tutorial.mp4
+85755780 Sun Nov 08 05:15:04 UTC 2026 BOOT-INF/classes/static/Images/manual.mp4
+80430644 Sun Nov 08 05:15:10 UTC 2026 BOOT-INF/classes/static/Images/fondoLogin.gif
+74403771 Sun Nov 08 05:15:28 UTC 2026 BOOT-INF/classes/static/Images/fondo.gif

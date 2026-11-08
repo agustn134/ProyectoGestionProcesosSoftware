@@ -1,0 +1,103 @@
+{
+  "project": "ejercicio5-api",
+  "dashboard": "http://localhost:9000/dashboard?id=ejercicio5-api",
+  "computeEngine": {
+    "queue": [],
+    "current": {
+      "id": "80817a6c-e363-44c6-ad09-b34e9132fe24",
+      "type": "REPORT",
+      "componentId": "20bbeb7e-46d1-45d1-8f28-a0c8b9929804",
+      "componentKey": "ejercicio5-api",
+      "componentName": "Ejercicio5MyAPIGestor",
+      "componentQualifier": "TRK",
+      "analysisId": "d7b76ec1-4ffb-4365-a458-1d6fcf065353",
+      "status": "SUCCESS",
+      "submittedAt": "2026-11-07T23:09:19-06:00",
+      "submitterLogin": "admin",
+      "startedAt": "2026-11-07T23:10:18-06:00",
+      "executedAt": "2026-11-07T23:10:28-06:00",
+      "executionTimeMs": 9366,
+      "hasScannerContext": true,
+      "warningCount": 0,
+      "warnings": [],
+      "infoMessages": []
+    }
+  },
+  "qualityGate": {
+    "projectStatus": {
+      "status": "OK",
+      "conditions": [],
+      "ignoredConditions": false,
+      "caycStatus": "compliant"
+    }
+  },
+  "measures": {
+    "component": {
+      "key": "ejercicio5-api",
+      "name": "Ejercicio5MyAPIGestor",
+      "description": "Proyecto My API Rest",
+      "qualifier": "TRK",
+      "measures": [
+        {
+          "metric": "coverage",
+          "value": "15.0",
+          "bestValue": false
+        },
+        {
+          "metric": "bugs",
+          "value": "15",
+          "bestValue": false
+        },
+        {
+          "metric": "code_smells",
+          "value": "5",
+          "bestValue": false
+        },
+        {
+          "metric": "ncloc",
+          "value": "780"
+        },
+        {
+          "metric": "vulnerabilities",
+          "value": "18",
+          "bestValue": false
+        },
+        {
+          "metric": "security_hotspots",
+          "value": "0",
+          "bestValue": true
+        }
+      ]
+    }
+  },
+  "analyses": {
+    "paging": {
+      "pageIndex": 1,
+      "pageSize": 1,
+      "total": 1
+    },
+    "analyses": [
+      {
+        "key": "d7b76ec1-4ffb-4365-a458-1d6fcf065353",
+        "date": "2026-11-07T23:08:11-06:00",
+        "events": [
+          {
+            "key": "6e8e36f1-be33-45d5-b84a-cba1615827de",
+            "category": "SQ_UPGRADE",
+            "name": "26.10.0.133078"
+          },
+          {
+            "key": "795ba550-6e91-4a35-bec0-ed96d45d59be",
+            "category": "VERSION",
+            "name": "0.0.1-SNAPSHOT"
+          }
+        ],
+        "projectVersion": "0.0.1-SNAPSHOT",
+        "manualNewCodePeriodBaseline": false,
+        "revision": "69ca27b6c12882f56fbcae675000207c29aa861e",
+        "detectedCI": "Jenkins",
+        "relativePathFromScmRoot": "Ejercicio5MyAPIGestor"
+      }
+    ]
+  }
+}

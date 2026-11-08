@@ -3,3 +3,6 @@ Ejercicio5Cliente/src/main/resources/static/Images/fondoLogin.gif filter=lfs dif
 Ejercicio5Cliente/src/main/resources/static/Images/hola.gif filter=lfs diff=lfs merge=lfs -text
 Ejercicio5Cliente/src/main/resources/static/Images/manual.mp4 filter=lfs diff=lfs merge=lfs -text
 Ejercicio5Cliente/src/main/resources/static/Images/tutorial.mp4 filter=lfs diff=lfs merge=lfs -text
+
+# Conservar los bytes de evidencia para que coincidan con SHA256SUMS y el ZIP.
+practica-3/parte-1/** -text

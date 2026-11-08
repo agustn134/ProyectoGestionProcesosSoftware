@@ -1,0 +1,110 @@
+{
+  "project": "ejercicio5-cliente",
+  "dashboard": "http://localhost:9000/dashboard?id=ejercicio5-cliente",
+  "computeEngine": {
+    "queue": [],
+    "current": {
+      "id": "811f35f6-6432-4711-8c9f-49c6ea007ab9",
+      "type": "REPORT",
+      "componentId": "b51ea608-ec74-46dd-b51d-596667610e62",
+      "componentKey": "ejercicio5-cliente",
+      "componentName": "Ejercicio5Cliente",
+      "componentQualifier": "TRK",
+      "analysisId": "281bbddb-6e94-4ecb-8c65-e6bd8a7adc2e",
+      "status": "SUCCESS",
+      "submittedAt": "2026-11-07T23:26:43-06:00",
+      "submitterLogin": "admin",
+      "startedAt": "2026-11-07T23:26:44-06:00",
+      "executedAt": "2026-11-07T23:28:19-06:00",
+      "executionTimeMs": 94580,
+      "hasScannerContext": true,
+      "warningCount": 0,
+      "warnings": [],
+      "infoMessages": []
+    }
+  },
+  "qualityGate": {
+    "projectStatus": {
+      "status": "OK",
+      "conditions": [
+        {
+          "status": "OK",
+          "metricKey": "new_violations",
+          "comparator": "GT",
+          "errorThreshold": "0",
+          "actualValue": "0"
+        }
+      ],
+      "ignoredConditions": false,
+      "period": {
+        "mode": "PREVIOUS_VERSION",
+        "date": "2026-11-07T23:08:11-06:00"
+      },
+      "caycStatus": "compliant"
+    }
+  },
+  "measures": {
+    "component": {
+      "key": "ejercicio5-cliente",
+      "name": "Ejercicio5Cliente",
+      "description": "Interfaz del Gestor de Proyectos",
+      "qualifier": "TRK",
+      "measures": [
+        {
+          "metric": "coverage",
+          "value": "30.9",
+          "bestValue": false
+        },
+        {
+          "metric": "bugs",
+          "value": "0",
+          "bestValue": true
+        },
+        {
+          "metric": "code_smells",
+          "value": "0",
+          "bestValue": true
+        },
+        {
+          "metric": "ncloc",
+          "value": "670"
+        },
+        {
+          "metric": "vulnerabilities",
+          "value": "0",
+          "bestValue": true
+        },
+        {
+          "metric": "security_hotspots",
+          "value": "0",
+          "bestValue": true
+        }
+      ]
+    }
+  },
+  "analyses": {
+    "paging": {
+      "pageIndex": 1,
+      "pageSize": 1,
+      "total": 2
+    },
+    "analyses": [
+      {
+        "key": "281bbddb-6e94-4ecb-8c65-e6bd8a7adc2e",
+        "date": "2026-11-07T23:25:33-06:00",
+        "events": [
+          {
+            "key": "63f5c7c8-cfe0-4478-a011-1a883ccb6d6c",
+            "category": "VERSION",
+            "name": "0.0.1-SNAPSHOT"
+          }
+        ],
+        "projectVersion": "0.0.1-SNAPSHOT",
+        "manualNewCodePeriodBaseline": false,
+        "revision": "00f74e27d624623b66cef282aa64149c59c55bb1",
+        "detectedCI": "Jenkins",
+        "relativePathFromScmRoot": "Ejercicio5Cliente"
+      }
+    ]
+  }
+}

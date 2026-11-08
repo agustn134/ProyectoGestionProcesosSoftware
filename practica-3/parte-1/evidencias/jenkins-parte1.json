@@ -1,0 +1,128 @@
+{
+  "scope": "Practica 3 - Parte 1",
+  "timeZone": "America/Mexico_City",
+  "collectedAtUtc": "2026-11-08T05:31:12.835786+00:00",
+  "tools": {
+    "jenkinsVersion": "2.541.3",
+    "javaVersion": "21.0.9",
+    "javaHome": "/opt/java/openjdk",
+    "jdks": [
+      {
+        "name": "JDK21",
+        "home": "/opt/java/openjdk"
+      }
+    ],
+    "maven": [
+      {
+        "name": "Maven3",
+        "installers": [
+          "3.9.9"
+        ]
+      }
+    ]
+  },
+  "builds": [
+    {
+      "service": "Ejercicio5Cliente",
+      "build": 4,
+      "result": "SUCCESS",
+      "sourceRevision": "00f74e27d624623b66cef282aa64149c59c55bb1",
+      "timestampUtc": "2026-11-08T05:13:13.186000+00:00",
+      "timestampMexicoCity": "2026-11-07T23:13:13.186000-06:00",
+      "url": "http://localhost:8090/job/Unidad2-Cliente/4/",
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "artifactCount": 46
+    },
+    {
+      "service": "Ejercicio5MyAPIGestor",
+      "build": 2,
+      "result": "SUCCESS",
+      "sourceRevision": "69ca27b6c12882f56fbcae675000207c29aa861e",
+      "timestampUtc": "2026-11-08T05:00:37.213000+00:00",
+      "timestampMexicoCity": "2026-11-07T23:00:37.213000-06:00",
+      "url": "http://localhost:8090/job/Unidad2-API/2/",
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "artifactCount": 54
+    }
+  ],
+  "coverage": [
+    {
+      "service": "Ejercicio5Cliente",
+      "build": 4,
+      "counter": "METHOD",
+      "covered": 24,
+      "missed": 74,
+      "total": 98,
+      "percent": 24.49,
+      "exclusions": []
+    },
+    {
+      "service": "Ejercicio5MyAPIGestor",
+      "build": 2,
+      "counter": "METHOD",
+      "covered": 20,
+      "missed": 83,
+      "total": 103,
+      "percent": 19.42,
+      "exclusions": []
+    }
+  ],
+  "sonar": [
+    {
+      "service": "Ejercicio5Cliente",
+      "projectKey": "ejercicio5-cliente",
+      "analysisId": "281bbddb-6e94-4ecb-8c65-e6bd8a7adc2e",
+      "revision": "00f74e27d624623b66cef282aa64149c59c55bb1",
+      "processed": "SUCCESS",
+      "qualityGate": "OK",
+      "metrics": {
+        "coverage": "30.9",
+        "bugs": "0",
+        "code_smells": "0",
+        "ncloc": "670",
+        "vulnerabilities": "0",
+        "security_hotspots": "0"
+      },
+      "dashboard": "http://localhost:9000/dashboard?id=ejercicio5-cliente"
+    },
+    {
+      "service": "Ejercicio5MyAPIGestor",
+      "projectKey": "ejercicio5-api",
+      "analysisId": "d7b76ec1-4ffb-4365-a458-1d6fcf065353",
+      "revision": "69ca27b6c12882f56fbcae675000207c29aa861e",
+      "processed": "SUCCESS",
+      "qualityGate": "OK",
+      "metrics": {
+        "coverage": "15.0",
+        "bugs": "15",
+        "code_smells": "5",
+        "ncloc": "780",
+        "vulnerabilities": "18",
+        "security_hotspots": "0"
+      },
+      "dashboard": "http://localhost:9000/dashboard?id=ejercicio5-api"
+    }
+  ],
+  "pomChecks": [
+    {
+      "service": "Ejercicio5Cliente",
+      "beforeJava": "17",
+      "afterJava": "21",
+      "originalSha256": "ad43c5332fbc546fd6c0b35268001bde1b3d46314a79bf1b5eee881ed2df3b06",
+      "updatedSha256": "ed558bf48efd3fe9878d558455467c99dfd0a9dcfc4b5044ac6c25e795513276",
+      "activePomMatches": true
+    },
+    {
+      "service": "Ejercicio5MyAPIGestor",
+      "beforeJava": "17",
+      "afterJava": "21",
+      "originalSha256": "0f07a5f492066cc15a95575a773722f4ce728da71e12ef01c0c091b124ba4476",
+      "updatedSha256": "2dcbe36c0bdb5fc21e34407493391ed63bbc556fe93bd27512f921bbb0bc6351",
+      "activePomMatches": true
+    }
+  ]
+}

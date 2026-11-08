@@ -1,0 +1,18 @@
+Checking out Revision 69ca27b6c12882f56fbcae675000207c29aa861e (refs/remotes/origin/main)
+openjdk version "21.0.9" 2025-10-21 LTS
+Apache Maven 3.9.9 (8e8579a9e76f7d015ee5ec7bfcdc97d260186937)
+Java version: 21.0.9, vendor: Eclipse Adoptium, runtime: /opt/java/openjdk
+[INFO] --- jacoco:0.8.12:prepare-agent (coverage-agent) @ Ejercicio5MyAPIGestor ---
+[INFO] Compiling 16 source files with javac [debug parameters release 21] to target/classes
+[INFO] Compiling 2 source files with javac [debug parameters release 21] to target/test-classes
+[INFO] --- surefire:3.2.5:test (default-test) @ Ejercicio5MyAPIGestor ---
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 29.05 s -- in com.mx.cbtis.gestor.controller.ProyectosControllerTests
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0
+[INFO] --- jacoco:0.8.12:report (coverage-report) @ Ejercicio5MyAPIGestor ---
+[INFO] BUILD SUCCESS
+[INFO] --- sonar:5.5.0.6356:sonar (default-cli) @ Ejercicio5MyAPIGestor ---
+[INFO] ANALYSIS SUCCESSFUL, you can find the results at: http://sonarqube:9000/dashboard?id=ejercicio5-api
+[INFO] Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+[INFO] More about the report processing at http://sonarqube:9000/api/ce/task?id=80817a6c-e363-44c6-ad09-b34e9132fe24
+[INFO] BUILD SUCCESS
+Finished: SUCCESS

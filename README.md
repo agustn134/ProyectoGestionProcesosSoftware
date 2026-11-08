@@ -30,3 +30,6 @@ Ver ci/README.md y entrega-unidad2/ACTUALIZACION.md. Crear dos pipelines desde S
 Adaptación académica del proyecto admin-proyectos de Enrique1189: https://github.com/Enrique1189/admin-proyectos. Se conserva su estructura y se documenta aquí la actualización a Java 21 y la preparación de CI.
 
 Los recursos multimedia grandes utilizan Git LFS. Instalar Git LFS antes de clonar; si ya se clonó, ejecutar git lfs install y git lfs pull antes de compilar.
+
+## Práctica 3, Parte 1
+La entrega específica, los cuatro POM identificados, el documento técnico, los reportes y el guion del video se encuentran en [practica-3/parte-1](practica-3/parte-1/README.md).

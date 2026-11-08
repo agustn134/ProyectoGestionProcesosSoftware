@@ -1,0 +1,5 @@
+dea905251c * Ejercicio5Cliente/src/main/resources/static/Images/fondo.gif
+eabcb49cb2 * Ejercicio5Cliente/src/main/resources/static/Images/fondoLogin.gif
+072aa97b21 * Ejercicio5Cliente/src/main/resources/static/Images/hola.gif
+7c47d70723 * Ejercicio5Cliente/src/main/resources/static/Images/manual.mp4
+d20c3289d1 * Ejercicio5Cliente/src/main/resources/static/Images/tutorial.mp4
