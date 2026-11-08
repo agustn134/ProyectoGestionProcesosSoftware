@@ -1,0 +1,77 @@
+pipeline {
+    agent any
+
+    tools {
+        jdk 'JDK21'
+        maven 'Maven3'
+    }
+
+    options {
+        skipDefaultCheckout(true)
+        disableConcurrentBuilds()
+        timeout(time: 30, unit: 'MINUTES')
+        buildDiscarder(logRotator(numToKeepStr: '10'))
+    }
+
+    parameters {
+        booleanParam(name: 'ANALIZAR_SONAR', defaultValue: false,
+                     description: 'Activar después de configurar el servidor SonarQube y su token en Jenkins.')
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Ver directorio') {
+            steps {
+                sh 'pwd'
+                sh 'ls -la'
+                sh 'test -f Ejercicio5MyAPIGestor/pom.xml'
+            }
+        }
+
+        stage('Verificar versiones') {
+            steps {
+                sh 'java -version'
+                sh 'mvn -version'
+            }
+        }
+
+        stage('Compilar y probar') {
+            steps {
+                sh 'mvn -B -ntp -f Ejercicio5MyAPIGestor/pom.xml clean verify -Dtest=ProyectosControllerTests'
+            }
+            post {
+                always {
+                    junit testResults: 'Ejercicio5MyAPIGestor/target/surefire-reports/TEST-*.xml',
+                          allowEmptyResults: false
+                }
+            }
+        }
+
+        stage('SonarQube') {
+            when {
+                expression { params.ANALIZAR_SONAR }
+            }
+            steps {
+                withSonarQubeEnv('SonarQube') {
+                    withEnv(["SONAR_TOKEN=${env.SONAR_AUTH_TOKEN}"]) {
+                    sh 'mvn -B -ntp -f Ejercicio5MyAPIGestor/pom.xml sonar:sonar -Dsonar.projectKey=ejercicio5-api -Dsonar.projectName=Ejercicio5MyAPIGestor'
+                    }
+                }
+            }
+        }
+
+        stage('Guardar JAR') {
+            steps {
+                archiveArtifacts artifacts: 'Ejercicio5MyAPIGestor/target/*.jar', fingerprint: true
+            }
+        }
+    }
+}
+
+
+
