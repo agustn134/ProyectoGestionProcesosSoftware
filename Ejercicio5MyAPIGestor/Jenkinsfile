@@ -58,7 +58,7 @@ pipeline {
             }
             steps {
                 withSonarQubeEnv('SonarQube') {
-                    withEnv(["SONAR_TOKEN=${env.SONAR_AUTH_TOKEN}"]) {
+                    withCredentials([string(credentialsId: 'sonar-token', variable: 'SONAR_TOKEN')]) {
                     sh 'mvn -B -ntp -f Ejercicio5MyAPIGestor/pom.xml sonar:sonar -Dsonar.projectKey=ejercicio5-api -Dsonar.projectName=Ejercicio5MyAPIGestor'
                     }
                 }
@@ -72,8 +72,3 @@ pipeline {
         }
     }
 }
-
-
-
-
-
