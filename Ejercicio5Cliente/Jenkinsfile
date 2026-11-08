@@ -68,11 +68,12 @@ pipeline {
 
         stage('Guardar JAR') {
             steps {
-                archiveArtifacts artifacts: 'Ejercicio5Cliente/target/*.jar', fingerprint: true
+                archiveArtifacts artifacts: 'Ejercicio5Cliente/target/*.jar, Ejercicio5Cliente/target/site/jacoco/**, Ejercicio5Cliente/target/surefire-reports/TEST-*.xml', fingerprint: true
             }
         }
     }
 }
+
 
 
 
