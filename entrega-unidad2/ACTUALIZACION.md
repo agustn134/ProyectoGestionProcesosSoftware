@@ -45,10 +45,10 @@ Los otros contenedores MariaDB encontrados son bold_satoshi, lucid_tu y wonderfu
 
 ## Publicación y entrega
 Existe un remoto configurado: https://github.com/agustn134/ProyectoGestionProcesosSoftware
-Esto no demuestra que los cambios locales ya estén publicados.
+La publicación se realizó y se verificó contra la rama main del remoto.
 Los Jenkinsfile están adaptados al repositorio conjunto mediante checkout scm y rutas a cada carpeta. Crear dos trabajos Pipeline from SCM con la URL del repositorio y los Script Path Ejercicio5Cliente/Jenkinsfile y Ejercicio5MyAPIGestor/Jenkinsfile. La rama debe ser la que contenga la actualización.
 
-Ligas previstas dentro del repositorio (verificar publicación y rama antes de entregar):
+Ligas publicadas y verificadas en la rama main:
 - https://github.com/agustn134/ProyectoGestionProcesosSoftware/tree/main/Ejercicio5Cliente
 - https://github.com/agustn134/ProyectoGestionProcesosSoftware/tree/main/Ejercicio5MyAPIGestor
 
@@ -67,8 +67,16 @@ El cliente también terminó con BUILD SUCCESS: seis pruebas, cero fallos y cero
 Publicación destinada al repositorio del estudiante: https://github.com/agustn134/ProyectoGestionProcesosSoftware. El código original se referencia en el README. Los archivos multimedia grandes se conservan mediante Git LFS: al clonar instalar Git LFS y ejecutar git lfs pull antes de compilar.
 
 ## Jenkins verificado
-Se conservó Jenkins 2.541.3 y su volumen jenkins_home. El controlador nuevo ejecuta Temurin JDK 21.0.9 y conserva el acceso local http://localhost:8090. Se verificaron la definición JDK21 con /opt/java/openjdk y Maven3 con instalador 3.9.9. Jenkins completó su inicialización. El contenedor anterior quedó detenido como jenkins-java17-respaldo. La compilación de los pipelines desde GitHub y el análisis SonarQube no se han ejecutado en esta actividad.
+Se conservó Jenkins 2.541.3 y su volumen jenkins_home. El controlador nuevo ejecuta Temurin JDK 21.0.9 y conserva el acceso local http://localhost:8090. Se verificaron la definición JDK21 con /opt/java/openjdk y Maven3 con instalador 3.9.9. Jenkins completó su inicialización. El contenedor anterior quedó detenido como jenkins-java17-respaldo. Se ejecutaron los dos pipelines desde GitHub y ambos terminaron en SUCCESS. SonarQube no se ejecutó; su parámetro permanece desactivado.
 
 MariaDB: conexión autenticada verificada a dbgestor. Tablas presentes: asignaciones, comentarios, hibernate_sequence, proyectos, tareas y usuario. No se modificaron los registros.
 
 Jenkins incluye Git LFS; el pipeline del cliente ejecuta git lfs pull para incorporar los videos y GIF reales al JAR. La página de acceso de Jenkins respondió HTTP 200 después de la migración.
+
+## Resultado final en Jenkins
+- Unidad2-Cliente, compilación #1: SUCCESS.
+- Unidad2-API, compilación #1: SUCCESS.
+- Maven efectivo: 3.9.9; Java efectivo: Temurin 21.0.9 en Linux.
+- Se ejecutó clean verify con las pruebas MVC seleccionadas, se generaron los reportes JaCoCo y se archivaron los JAR.
+- Jenkins: http://localhost:8090/job/Unidad2-Cliente/1/ y http://localhost:8090/job/Unidad2-API/1/ (ligas accesibles desde el equipo local).
+- El análisis SonarQube quedó desactivado; el plugin solicitado sí está declarado en ambos POM.
