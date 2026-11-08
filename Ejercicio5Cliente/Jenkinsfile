@@ -22,7 +22,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 checkout scm
-                sh 'git lfs install --local'
+                sh 'git lfs install --local --skip-repo'
                 sh 'git lfs pull'
             }
         }
