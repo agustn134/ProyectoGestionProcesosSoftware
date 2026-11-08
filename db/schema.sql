@@ -53,3 +53,6 @@ CREATE TABLE `usuario` (
   `imagen_usuario` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_usuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+-- Estado inicial técnico del generador de IDs; no contiene datos de personas.
+INSERT INTO hibernate_sequence (next_val) VALUES (1);

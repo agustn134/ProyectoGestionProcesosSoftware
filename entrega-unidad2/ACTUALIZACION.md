@@ -65,3 +65,10 @@ La API se compiló con JDK 21.0.12 y Maven 3.9.9: BUILD SUCCESS, seis pruebas MV
 El cliente también terminó con BUILD SUCCESS: seis pruebas, cero fallos y cero errores; se generaron JAR y reportes JaCoCo. En total se aprobaron doce pruebas MVC con Java 21.
 
 Publicación destinada al repositorio del estudiante: https://github.com/agustn134/ProyectoGestionProcesosSoftware. El código original se referencia en el README. Los archivos multimedia grandes se conservan mediante Git LFS: al clonar instalar Git LFS y ejecutar git lfs pull antes de compilar.
+
+## Jenkins verificado
+Se conservó Jenkins 2.541.3 y su volumen jenkins_home. El controlador nuevo ejecuta Temurin JDK 21.0.9 y conserva el acceso local http://localhost:8090. Se verificaron la definición JDK21 con /opt/java/openjdk y Maven3 con instalador 3.9.9. Jenkins completó su inicialización. El contenedor anterior quedó detenido como jenkins-java17-respaldo. La compilación de los pipelines desde GitHub y el análisis SonarQube no se han ejecutado en esta actividad.
+
+MariaDB: conexión autenticada verificada a dbgestor. Tablas presentes: asignaciones, comentarios, hibernate_sequence, proyectos, tareas y usuario. No se modificaron los registros.
+
+Jenkins incluye Git LFS; el pipeline del cliente ejecuta git lfs pull para incorporar los videos y GIF reales al JAR. La página de acceso de Jenkins respondió HTTP 200 después de la migración.
