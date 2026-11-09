@@ -7,6 +7,9 @@ case "$module" in
 esac
 report="$WORKSPACE/ci-reports/$module"
 mkdir -p "$report"
+python3 --version > "$report/tool-versions.txt"
+osv-scanner --version >> "$report/tool-versions.txt"
+gitleaks version >> "$report/tool-versions.txt"
 python3 -m unittest discover -s ci/tests
 python3 ci/scan_source.py --paths "$module" --output "$report/source-checks.json"
 mvn -B -ntp -f "$module/pom.xml" org.cyclonedx:cyclonedx-maven-plugin:2.9.1:makeBom \
