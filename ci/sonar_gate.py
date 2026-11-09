@@ -3,6 +3,8 @@
 import argparse
 import json
 import os
+import re
+import subprocess
 import time
 import urllib.parse
 import urllib.request
@@ -36,15 +38,18 @@ if task['status'] != 'SUCCESS':
 analysis_id = task['analysisId']
 gate = get('/api/qualitygates/project_status?analysisId='+urllib.parse.quote(analysis_id))
 measures = get('/api/measures/component?component='+args.project+'&metricKeys=coverage,bugs,vulnerabilities,code_smells,security_hotspots,ncloc')
-analyses = get('/api/project_analyses/search?project='+args.project+'&ps=1')
-analysis = analyses['analyses'][0]
-assert analysis['key'] == analysis_id, 'Se observó un análisis diferente al subido por este build'
-assert analysis['revision'] == os.environ['GIT_COMMIT'], 'La revisión de Sonar no coincide con este checkout'
+assert task['id'] == properties['ceTaskId'] and task['componentKey'] == args.project, 'La tarea no pertenece al reporte de este build'
+revision = subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
+subprocess.run(['git','diff','--exit-code','--',args.module],check=True)
+scanner_log = (Path('ci-reports')/args.module/'sonar-scanner.log').read_text(encoding='utf-8')
+scm = re.findall(r"SCM revision ID '([0-9a-f]{40})'",scanner_log)
+assert scm and scm[-1] == revision, 'El SCM reportado por el escáner no coincide con el checkout'
 metrics = {entry['metric']: entry.get('value') for entry in measures['component']['measures']}
 assert 'vulnerabilities' in metrics and str(metrics['vulnerabilities']).isdecimal(), 'Falta una métrica válida de vulnerabilidades'
 assert 'ncloc' in metrics and str(metrics['ncloc']).isdecimal() and int(metrics['ncloc']) > 0, 'No se acreditó código fuente analizado'
 passed = gate['projectStatus']['status'] == 'OK' and int(metrics['vulnerabilities']) == 0
-result = {'projectKey': args.project, 'analysisId': analysis_id, 'revision': analysis['revision'],
+result = {'projectKey': args.project, 'analysisId': analysis_id, 'revision': revision,
+          'revisionEvidence': 'SCM del escáner + checkout limpio + ceTaskId del reporte procesado',
           'processed': task['status'], 'qualityGate': gate, 'metrics': metrics,
           'policy': 'Quality Gate OK y cero vulnerabilidades reportadas por Sonar; no demuestra ausencia de todo riesgo',
           'status': 'PASS' if passed else 'FAIL'}

@@ -28,7 +28,13 @@ pipeline {
             steps {
                 withSonarQubeEnv('SonarQube') {
                     withCredentials([string(credentialsId: 'sonar-token', variable: 'SONAR_TOKEN')]) {
-                        sh 'mvn -B -ntp -f Ejercicio5MyAPIGestor/pom.xml sonar:sonar -Dsonar.projectKey=ejercicio5-api-parte2 -Dsonar.projectName=Ejercicio5MyAPIGestor-Parte2 -Dsonar.exclusions=**/target/**,**/practica-3/**,**/ci-reports/** -Dsonar.coverage.exclusions=**/*Application.java'
+                        sh '''
+                            set +e
+                            mvn -B -ntp -f Ejercicio5MyAPIGestor/pom.xml sonar:sonar -Dsonar.projectKey=ejercicio5-api-parte2 -Dsonar.projectName=Ejercicio5MyAPIGestor-Parte2 -Dsonar.exclusions=**/target/**,**/practica-3/**,**/ci-reports/** -Dsonar.coverage.exclusions=**/*Application.java > ci-reports/Ejercicio5MyAPIGestor/sonar-scanner.log 2>&1
+                            result=$?
+                            cat ci-reports/Ejercicio5MyAPIGestor/sonar-scanner.log
+                            exit "$result"
+                        '''
                         sh 'python3 ci/sonar_gate.py --module Ejercicio5MyAPIGestor --project ejercicio5-api-parte2'
                     }
                 }

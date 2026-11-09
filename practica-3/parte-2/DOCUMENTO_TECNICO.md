@@ -43,6 +43,8 @@ La API deja de comparar contraseñas en texto plano en una consulta SQL. Los nue
 
 **Compatibilidad de datos anteriores:** no se ejecutó una migración ni actualización de contraseñas sobre la base real. Las contraseñas anteriores almacenadas en claro requieren restablecimiento para utilizar el nuevo login. No se presenta ese dato heredado como corregido en producción. Las cuentas de Jenkins y SonarQube son independientes de las cuentas de la aplicación.
 
+La aplicación original no tiene una sesión/token ni autorización completa de cada operación CRUD. Esta entrega no afirma haber añadido ese sistema de control de acceso; se registra como límite arquitectónico real, no como falso positivo. El restablecimiento de cuentas antiguas requiere un proceso de administración autorizado o un registro nuevo en el entorno de práctica; no se añadió un flujo de recuperación ni se cambió la base real.
+
 ## Dependencias y compatibilidad
 
 La migración inicial a Java 21 no corregía las vulnerabilidades de las bibliotecas antiguas. Se actualizó Spring Boot a 3.5.16 en los dos servicios y se fijaron revisiones adicionales obtenidas de Maven Central y contrastadas con OSV:
@@ -102,4 +104,5 @@ El operador aprovisiona el contenedor de CI; el pipeline verifica importación, 
 5. Ejecutar los tres trabajos y consultar pruebas, reportes y commits de esas mismas ejecuciones.
 
 La [validación final](VALIDACION.md) y el paquete de evidencias identifican los resultados reales. Para abrir JaCoCo HTML, descomprimir el ZIP conservando todos sus recursos. El [guion](GUION_VIDEO.md) indica qué mostrar y qué explicar; no sustituye la grabación del video.
+
 
