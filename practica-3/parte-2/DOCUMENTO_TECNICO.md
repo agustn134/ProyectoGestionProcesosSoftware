@@ -106,3 +106,9 @@ El operador aprovisiona el contenedor de CI; el pipeline verifica importación, 
 La [validación final](VALIDACION.md) y el paquete de evidencias identifican los resultados reales. Para abrir JaCoCo HTML, descomprimir el ZIP conservando todos sus recursos. El [guion](GUION_VIDEO.md) indica qué mostrar y qué explicar; no sustituye la grabación del video.
 
 
+
+### Incidencia de permisos del verificador
+El análisis de Sonar terminó correctamente en un ciclo inicial, pero la consulta al historial devolvió HTTP 403 con el token limitado a análisis. La solución conserva ese token: se correlacionan el ceTaskId del reporte, el procesamiento SUCCESS, la revisión SCM registrada por el escáner y un checkout Git limpio. El historial se exporta después por el operador, fuera del pipeline, para contrastar la revisión. No se concedieron permisos administrativos al token de CI.
+
+### Repetición tras reinicio de Docker
+Un reinicio del entorno interrumpió un ciclo de Jenkins; esas ejecuciones abortadas no se cuentan como aprobadas. Se repite el ciclo desde cero. Para este equipo se configuró un ejecutor CI, Maven con máximo de heap 512 MiB y las JVM de pruebas/escáner con 768 MiB, conservando pruebas y umbrales completos. Los números finales se toman exclusivamente de VALIDACION.md.

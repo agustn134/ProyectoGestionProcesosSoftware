@@ -27,3 +27,5 @@ Los tres trabajos se configuran desde SCM con la rama featured/parte-2. Los trab
 - scan_source.py añade tres reglas explícitas para comparaciones null inseguras, contraseñas predeterminadas y SQL global. Complementa las herramientas anteriores; no es un SAST completo.
 
 Los reportes quedan en ci-reports/<módulo>/ y en los artefactos de Jenkins. No se convierten errores en resultados limpios ni se suprimen vulnerabilidades para aprobar.
+
+Configuración para el equipo de la práctica: un ejecutor, MAVEN_OPTS=-Xmx512m y JAVA_TOOL_OPTIONS=-Xmx768m por job. Los trabajos esperan su turno; no se reduce la suite ni el umbral de cobertura.

@@ -14,6 +14,8 @@ pipeline {
     }
 
     environment {
+        MAVEN_OPTS = '-Xmx512m'
+        JAVA_TOOL_OPTIONS = '-Xmx768m'
         CI_DB_URL = 'jdbc:mariadb://admin-proyectos-db-ci:3306/ci_gestor'
     }
 

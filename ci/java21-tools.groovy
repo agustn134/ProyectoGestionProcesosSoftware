@@ -7,6 +7,7 @@ def j = Jenkins.get()
 def jdks = j.getJDKs().findAll { it.name != 'JDK21' }
 jdks.add(new JDK('JDK21', '/opt/java/openjdk'))
 j.setJDKs(jdks)
+j.setNumExecutors(1)
 j.save()
 def descriptor = j.getDescriptorByType(Maven.DescriptorImpl.class)
 def installs = descriptor.getInstallations().findAll { it.name != 'Maven3' }
