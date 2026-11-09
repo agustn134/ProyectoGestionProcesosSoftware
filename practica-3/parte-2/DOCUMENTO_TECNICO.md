@@ -4,7 +4,7 @@
 
 Esta entrega corresponde a la segunda mitad de la práctica: pruebas automatizadas de los métodos evaluables, cobertura verificable, análisis de vulnerabilidades con clasificación y atención, y pipelines independientes de frontend, backend y base de datos. El guion permite demostrar las ejecuciones y explicar lo aprendido; el estudiante debe grabar la demostración.
 
-El trabajo se encuentra en `codex/parte-2`. `main` conserva la Parte 1; `develop` se utiliza como punto de integración. Las ramas `codex/parte-1` y `codex/upgrade-java21` conservan referencias del estado entregado. Ver [organización de ramas](https://github.com/agustn134/ProyectoGestionProcesosSoftware/blob/codex/parte-2/RAMAS.md). No se fusionó la Parte 2 automáticamente en las ramas estables.
+El trabajo se encuentra en `featured/parte-2`. `main` conserva la Parte 1; `develop` se utiliza como punto de integración. Las ramas `featured/parte-1` y `featured/upgrade-java21` conservan referencias del estado entregado. Ver [organización de ramas](https://github.com/agustn134/ProyectoGestionProcesosSoftware/blob/featured/parte-2/RAMAS.md). No se fusionó la Parte 2 automáticamente en las ramas estables.
 
 ## Correspondencia con la rúbrica
 
@@ -85,7 +85,7 @@ No se llama “biblioteca corregida” ni “cero avisos” a este resultado. Lo
 
 ## Tres pipelines y base aislada
 
-Los trabajos `Practica3-Parte2-Frontend`, `Practica3-Parte2-Backend` y `Practica3-Parte2-BaseDatos` hacen checkout de `codex/parte-2`, muestran versiones y publican sus resultados de calidad. Los dos primeros ejecutan suite completa, check de cobertura, revisión de dependencias/secretos y Sonar. La subida del análisis no se confunde con su procesamiento: se espera SUCCESS del servidor y se valida la revisión Git antes de consultar el Quality Gate.
+Los trabajos `Practica3-Parte2-Frontend`, `Practica3-Parte2-Backend` y `Practica3-Parte2-BaseDatos` hacen checkout de `featured/parte-2`, muestran versiones y publican sus resultados de calidad. Los dos primeros ejecutan suite completa, check de cobertura, revisión de dependencias/secretos y Sonar. La subida del análisis no se confunde con su procesamiento: se espera SUCCESS del servidor y se valida la revisión Git antes de consultar el Quality Gate.
 
 El tercer pipeline aplica y valida `db/schema.sql` en `admin-proyectos-db-ci`, base `ci_gestor`, usuario `ci_runner`. El contenedor no publica puertos y usa tmpfs; no comparte datos con `admin-proyectos-mariadb`. El usuario CI tiene permisos sobre esa base, sin privilegios globales ni acceso al socket Docker desde Jenkins.
 
@@ -95,10 +95,10 @@ El operador aprovisiona el contenedor de CI; el pipeline verifica importación, 
 
 ## Reproducción y evidencia
 
-1. Cambiar a `codex/parte-2`, instalar Git LFS y descargar los recursos del cliente.
-2. Configurar JDK21 y Maven3 3.9.9 y construir la imagen de [Jenkins](https://github.com/agustn134/ProyectoGestionProcesosSoftware/blob/codex/parte-2/ci/README.md).
+1. Cambiar a `featured/parte-2`, instalar Git LFS y descargar los recursos del cliente.
+2. Configurar JDK21 y Maven3 3.9.9 y construir la imagen de [Jenkins](https://github.com/agustn134/ProyectoGestionProcesosSoftware/blob/featured/parte-2/ci/README.md).
 3. Configurar `sonar-token` y `ci-db` en Jenkins sin incluir sus valores en Git.
-4. Preparar la base CI conforme a [db-tests](https://github.com/agustn134/ProyectoGestionProcesosSoftware/blob/codex/parte-2/db-tests/README.md).
+4. Preparar la base CI conforme a [db-tests](https://github.com/agustn134/ProyectoGestionProcesosSoftware/blob/featured/parte-2/db-tests/README.md).
 5. Ejecutar los tres trabajos y consultar pruebas, reportes y commits de esas mismas ejecuciones.
 
 La [validación final](VALIDACION.md) y el paquete de evidencias identifican los resultados reales. Para abrir JaCoCo HTML, descomprimir el ZIP conservando todos sus recursos. El [guion](GUION_VIDEO.md) indica qué mostrar y qué explicar; no sustituye la grabación del video.

@@ -65,5 +65,13 @@ class SecurityGateTests(unittest.TestCase):
         code,_=self.invoke(['GHSA-j9f9-w8pj-32f8'],policy=True,expires='2000-01-01')
         self.assertNotEqual(0,code)
 
+    def test_similar_test_name_cannot_authorize_exception(self):
+        code,_=self.invoke(['GHSA-j9f9-w8pj-32f8'],policy=True,test='<testcase name="contextoSeguroSinSseNiXsltFake"/>')
+        self.assertNotEqual(0,code)
+
+    def test_nested_wildcard_invalidates_context_review(self):
+        code,_=self.invoke(['GHSA-j9f9-w8pj-32f8'],policy=True,source='class Demo { String route="/x/**"; }')
+        self.assertNotEqual(0,code)
+
 if __name__=='__main__':
     unittest.main()

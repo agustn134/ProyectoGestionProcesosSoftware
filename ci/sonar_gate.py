@@ -41,7 +41,9 @@ analysis = analyses['analyses'][0]
 assert analysis['key'] == analysis_id, 'Se observó un análisis diferente al subido por este build'
 assert analysis['revision'] == os.environ['GIT_COMMIT'], 'La revisión de Sonar no coincide con este checkout'
 metrics = {entry['metric']: entry.get('value') for entry in measures['component']['measures']}
-passed = gate['projectStatus']['status'] == 'OK' and int(metrics.get('vulnerabilities','0')) == 0
+assert 'vulnerabilities' in metrics and str(metrics['vulnerabilities']).isdecimal(), 'Falta una métrica válida de vulnerabilidades'
+assert 'ncloc' in metrics and str(metrics['ncloc']).isdecimal() and int(metrics['ncloc']) > 0, 'No se acreditó código fuente analizado'
+passed = gate['projectStatus']['status'] == 'OK' and int(metrics['vulnerabilities']) == 0
 result = {'projectKey': args.project, 'analysisId': analysis_id, 'revision': analysis['revision'],
           'processed': task['status'], 'qualityGate': gate, 'metrics': metrics,
           'policy': 'Quality Gate OK y cero vulnerabilidades reportadas por Sonar; no demuestra ausencia de todo riesgo',

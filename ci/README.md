@@ -18,7 +18,7 @@ La credencial ci-db es Username with password: usuario ci_runner y contraseña c
 - Backend: Ejercicio5MyAPIGestor/Jenkinsfile.
 - Base de datos: db/Jenkinsfile.
 
-Los tres trabajos se configuran desde SCM con la rama codex/parte-2. Los trabajos de la Parte 1 conservan main.
+Los tres trabajos se configuran desde SCM con la rama featured/parte-2. Los trabajos de la Parte 1 conservan main.
 
 ## Qué analiza cada herramienta
 - SonarQube revisa código Java y pruebas; target, reportes de prácticas y ci-reports quedan fuera del análisis como código fuente. XML JaCoCo y bytecode de target se leen como insumos. sonar_gate.py espera procesamiento, verifica el commit y exige Quality Gate OK y cero vulnerabilidades reportadas.

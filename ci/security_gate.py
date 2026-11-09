@@ -41,14 +41,14 @@ if args.context_policy and args.module and findings:
         assert date.today() <= date.fromisoformat(policy['expires']), 'Revisión contextual vencida: debe reevaluarse'
         source = Path(args.module)/'src/main'
         assert source.is_dir() and any(source.rglob('*.java')), 'No hay fuente Java que permita comprobar el contexto'
-        forbidden = re.compile(r'SseEmitter|ServerSentEvent|text/event-stream|XsltView|[\"\u0027]/\*\*[\"\u0027]', re.I)
+        forbidden = re.compile(r'''SseEmitter|ServerSentEvent|text/event-stream|XsltView|["'][^"']*\*\*[^"']*["']''', re.I)
         for path in source.rglob('*'):
             if path.is_file() and path.suffix in ('.java','.xml','.properties','.yaml','.yml'):
                 assert not forbidden.search(path.read_text(encoding='utf-8-sig')), 'Se introdujeron condiciones que invalidan la excepción: '+str(path)
         checks = []
         for report in (Path(args.module)/'target/surefire-reports').glob('TEST-*.xml'):
             for test in ET.parse(report).getroot().iter('testcase'):
-                if test.get('name','').startswith(policy['requiredPassingTest']):
+                if test.get('name','') == policy['requiredPassingTest']:
                     checks.append(all(test.find(tag) is None for tag in ('failure','error','skipped')))
         assert checks and all(checks), 'Falta una prueba MVC real y aprobada de las condiciones de aplicabilidad'
         for finding in eligible:
