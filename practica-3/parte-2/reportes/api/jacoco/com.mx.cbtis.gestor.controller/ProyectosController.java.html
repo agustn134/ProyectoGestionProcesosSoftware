@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ProyectosController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Ejercicio5MyAPIGestor</a> &gt; <a href="index.source.html" class="el_package">com.mx.cbtis.gestor.controller</a> &gt; <span class="el_source">ProyectosController.java</span></div><h1>ProyectosController.java</h1><pre class="source lang-java linenums">package com.mx.cbtis.gestor.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+import jakarta.validation.Valid;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
+import com.mx.cbtis.gestor.dto.*;
+import com.mx.cbtis.gestor.modelo.Proyectos;
+import com.mx.cbtis.gestor.repository.ProtectosRepository;
+
+@RestController
+public class ProyectosController {
+    private final ProtectosRepository proyectostable;
+
+<span class="fc" id="L17">    public ProyectosController(ProtectosRepository repository) {</span>
+<span class="fc" id="L18">        this.proyectostable = repository;</span>
+<span class="fc" id="L19">    }</span>
+
+    @GetMapping(&quot;/buscarProyecto&quot;)
+    public Proyectos getProyecto(@RequestParam int id_proyecto) {
+<span class="fc" id="L23">        requireId(id_proyecto);</span>
+<span class="fc" id="L24">        return proyectostable.findById(id_proyecto)</span>
+<span class="fc" id="L25">            .orElseThrow(() -&gt; new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Registro no encontrado.&quot;));</span>
+    }
+
+    @PostMapping(&quot;/addProyecto&quot;)
+    public int addProyecto(@Valid @RequestBody ProyectoRequest request) {
+<span class="fc bfc" id="L30" title="All 2 branches covered.">        if (request.id_proyecto() != null) {</span>
+<span class="fc" id="L31">            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, &quot;El alta no acepta un ID existente.&quot;);</span>
+        }
+<span class="fc" id="L33">        validateDates(request);</span>
+<span class="fc" id="L34">        proyectostable.save(request.toEntity());</span>
+<span class="fc" id="L35">        return 1;</span>
+    }
+
+    @PostMapping(&quot;/updateProyecto&quot;)
+    public int updateProyecto(@Valid @RequestBody ProyectoRequest request) {
+<span class="fc" id="L40">        requireExisting(request.id_proyecto());</span>
+<span class="fc" id="L41">        validateDates(request);</span>
+<span class="fc" id="L42">        proyectostable.save(request.toEntity());</span>
+<span class="fc" id="L43">        return 1;</span>
+    }
+
+    @DeleteMapping(&quot;/deleteProyecto&quot;)
+    public int deleteProyecto(@Valid @RequestBody ProyectoIdRequest request) {
+<span class="fc" id="L48">        requireExisting(request.id_proyecto());</span>
+<span class="fc" id="L49">        proyectostable.deleteById(request.id_proyecto());</span>
+<span class="fc" id="L50">        return 1;</span>
+    }
+
+    @PostMapping(&quot;/buscarProyectos&quot;)
+    public List&lt;Proyectos&gt; getProyectos() {
+<span class="fc" id="L55">        List&lt;Proyectos&gt; values = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L56">        proyectostable.findAll().forEach(values::add);</span>
+<span class="fc" id="L57">        return values;</span>
+    }
+
+    private void validateDates(ProyectoRequest request) {
+<span class="fc bfc" id="L61" title="All 2 branches covered.">        if (request.fecha_finalizacion().isBefore(request.fecha_inicio())) {</span>
+<span class="fc" id="L62">            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, &quot;La fecha final debe ser posterior o igual a la inicial.&quot;);</span>
+        }
+<span class="fc" id="L64">    }</span>
+
+    private void requireExisting(Integer id) {
+<span class="fc" id="L67">        requireId(id);</span>
+<span class="fc bfc" id="L68" title="All 2 branches covered.">        if (!proyectostable.existsById(id)) {</span>
+<span class="fc" id="L69">            throw new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Registro no encontrado.&quot;);</span>
+        }
+<span class="fc" id="L71">    }</span>
+
+    private void requireId(Integer id) {
+<span class="fc bfc" id="L74" title="All 4 branches covered.">        if (id == null || id &lt;= 0) {</span>
+<span class="fc" id="L75">            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, &quot;El ID debe ser positivo.&quot;);</span>
+        }
+<span class="fc" id="L77">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

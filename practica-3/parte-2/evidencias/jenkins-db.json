@@ -1,0 +1,94 @@
+﻿{
+    "_class":  "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+    "actions":  [
+                    {
+                        "_class":  "hudson.model.CauseAction"
+                    },
+                    {
+                        "_class":  "org.jenkinsci.plugins.workflow.libs.LibrariesAction"
+                    },
+                    {
+
+                    },
+                    {
+                        "_class":  "hudson.plugins.git.util.BuildData",
+                        "lastBuiltRevision":  {
+                                                  "SHA1":  "8a6491fe29df05f275c76635fe864edbf750ddb3"
+                                              }
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "_class":  "hudson.tasks.junit.TestResultAction"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "_class":  "org.jenkinsci.plugins.displayurlapi.actions.RunDisplayAction"
+                    },
+                    {
+                        "_class":  "org.jenkinsci.plugins.pipeline.modeldefinition.actions.RestartDeclarativePipelineAction"
+                    },
+                    {
+
+                    },
+                    {
+                        "_class":  "org.jenkinsci.plugins.workflow.job.views.FlowGraphAction"
+                    },
+                    {
+
+                    },
+                    {
+
+                    }
+                ],
+    "artifacts":  [
+                      {
+                          "relativePath":  "ci-reports/db-tests/bom.json"
+                      },
+                      {
+                          "relativePath":  "ci-reports/db-tests/gitleaks.json"
+                      },
+                      {
+                          "relativePath":  "ci-reports/db-tests/osv.json"
+                      },
+                      {
+                          "relativePath":  "ci-reports/db-tests/schema-source-checks.json"
+                      },
+                      {
+                          "relativePath":  "ci-reports/db-tests/security-summary.json"
+                      },
+                      {
+                          "relativePath":  "ci-reports/db-tests/source-checks.json"
+                      },
+                      {
+                          "relativePath":  "ci-reports/db-tests/tool-versions.txt"
+                      },
+                      {
+                          "relativePath":  "db-tests/target/surefire-reports/com.mx.cbtis.ci.DatabaseSchemaTests.txt"
+                      },
+                      {
+                          "relativePath":  "db-tests/target/surefire-reports/TEST-com.mx.cbtis.ci.DatabaseSchemaTests.xml"
+                      }
+                  ],
+    "building":  false,
+    "duration":  235010,
+    "number":  4,
+    "result":  "SUCCESS",
+    "timestamp":  1794239117485,
+    "url":  "http://localhost:8090/job/Practica3-Parte2-BaseDatos/4/"
+}

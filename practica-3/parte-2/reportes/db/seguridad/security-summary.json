@@ -1,0 +1,12 @@
+{
+  "tool": "OSV-Scanner",
+  "version": "2.7.0",
+  "inventory": "CycloneDX generado por Maven; incluye scope test",
+  "packageCount": 9,
+  "findingCount": 0,
+  "status": "PASS",
+  "blockingFindingCount": 0,
+  "reviewedContextualFindings": [],
+  "suppressedFindings": [],
+  "findings": []
+}

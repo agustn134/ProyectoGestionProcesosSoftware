@@ -1,0 +1,25 @@
+{
+  "tool": "comprobaciones-locales-ci",
+  "version": "1.0",
+  "scope": [
+    "db"
+  ],
+  "limitations": "Tres reglas explícitas; no reemplaza SAST, SCA ni revisión manual.",
+  "exclusions": [
+    ".git",
+    ".idea",
+    ".tools",
+    "ci-reports",
+    "entrega-unidad2",
+    "practica-3",
+    "target"
+  ],
+  "omittedDirectoriesObserved": [],
+  "scannedFiles": [
+    {
+      "path": "db/schema.sql",
+      "sha256": "aabf9df577314eb8f720dd1a9b4a9ee7b94474377a0625377d038f9c59b6006c"
+    }
+  ],
+  "findings": []
+}

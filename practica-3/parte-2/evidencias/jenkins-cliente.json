@@ -1,0 +1,235 @@
+﻿{
+    "_class":  "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+    "actions":  [
+                    {
+                        "_class":  "hudson.model.CauseAction"
+                    },
+                    {
+                        "_class":  "org.jenkinsci.plugins.workflow.libs.LibrariesAction"
+                    },
+                    {
+
+                    },
+                    {
+                        "_class":  "hudson.plugins.git.util.BuildData",
+                        "lastBuiltRevision":  {
+                                                  "SHA1":  "8a6491fe29df05f275c76635fe864edbf750ddb3"
+                                              }
+                    },
+                    {
+
+                    },
+                    {
+                        "_class":  "hudson.tasks.junit.TestResultAction"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "_class":  "hudson.plugins.sonar.action.SonarAnalysisAction"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "_class":  "hudson.plugins.sonar.action.SonarBuildBadgeAction"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "_class":  "org.jenkinsci.plugins.displayurlapi.actions.RunDisplayAction"
+                    },
+                    {
+                        "_class":  "org.jenkinsci.plugins.pipeline.modeldefinition.actions.RestartDeclarativePipelineAction"
+                    },
+                    {
+
+                    },
+                    {
+                        "_class":  "org.jenkinsci.plugins.workflow.job.views.FlowGraphAction"
+                    },
+                    {
+
+                    },
+                    {
+
+                    }
+                ],
+    "artifacts":  [
+                      {
+                          "relativePath":  "ci-reports/Ejercicio5Cliente/bom.json"
+                      },
+                      {
+                          "relativePath":  "ci-reports/Ejercicio5Cliente/gitleaks.json"
+                      },
+                      {
+                          "relativePath":  "ci-reports/Ejercicio5Cliente/osv.json"
+                      },
+                      {
+                          "relativePath":  "ci-reports/Ejercicio5Cliente/security-summary.json"
+                      },
+                      {
+                          "relativePath":  "ci-reports/Ejercicio5Cliente/sonar-scanner.log"
+                      },
+                      {
+                          "relativePath":  "ci-reports/Ejercicio5Cliente/sonar-summary.json"
+                      },
+                      {
+                          "relativePath":  "ci-reports/Ejercicio5Cliente/source-checks.json"
+                      },
+                      {
+                          "relativePath":  "ci-reports/Ejercicio5Cliente/tool-versions.txt"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/Ejercicio5Cliente-0.0.1-SNAPSHOT.jar"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/com.mx.cbtis.controller/GestorController.html"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/com.mx.cbtis.controller/GestorController.java.html"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/com.mx.cbtis.controller/index.html"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/com.mx.cbtis.controller/index.source.html"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/com.mx.cbtis.modelo/Asignaciones.html"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/com.mx.cbtis.modelo/Asignaciones.java.html"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/com.mx.cbtis.modelo/Comentarios.html"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/com.mx.cbtis.modelo/Comentarios.java.html"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/com.mx.cbtis.modelo/index.html"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/com.mx.cbtis.modelo/index.source.html"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/com.mx.cbtis.modelo/Proyectos.html"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/com.mx.cbtis.modelo/Proyectos.java.html"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/com.mx.cbtis.modelo/Tareas.html"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/com.mx.cbtis.modelo/Tareas.java.html"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/com.mx.cbtis.modelo/Usuario.html"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/com.mx.cbtis.modelo/Usuario.java.html"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/index.html"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/jacoco-resources/branchfc.gif"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/jacoco-resources/branchnc.gif"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/jacoco-resources/branchpc.gif"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/jacoco-resources/bundle.gif"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/jacoco-resources/class.gif"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/jacoco-resources/down.gif"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/jacoco-resources/greenbar.gif"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/jacoco-resources/group.gif"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/jacoco-resources/method.gif"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/jacoco-resources/package.gif"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/jacoco-resources/prettify.css"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/jacoco-resources/prettify.js"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/jacoco-resources/redbar.gif"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/jacoco-resources/report.css"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/jacoco-resources/report.gif"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/jacoco-resources/session.gif"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/jacoco-resources/sort.gif"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/jacoco-resources/sort.js"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/jacoco-resources/source.gif"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/jacoco-resources/up.gif"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/jacoco-sessions.html"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/jacoco.csv"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/site/jacoco/jacoco.xml"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/surefire-reports/TEST-com.mx.cbtis.bromitas.Ejercicio5ClienteApplicationTests.xml"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/surefire-reports/TEST-com.mx.cbtis.controller.GestorControllerContractTests.xml"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/surefire-reports/TEST-com.mx.cbtis.controller.ProyectosClienteTests.xml"
+                      },
+                      {
+                          "relativePath":  "Ejercicio5Cliente/target/surefire-reports/TEST-com.mx.cbtis.modelo.ModeloJsonContractTests.xml"
+                      }
+                  ],
+    "building":  false,
+    "duration":  140575,
+    "number":  4,
+    "result":  "SUCCESS",
+    "timestamp":  1794239117469,
+    "url":  "http://localhost:8090/job/Practica3-Parte2-Frontend/4/"
+}

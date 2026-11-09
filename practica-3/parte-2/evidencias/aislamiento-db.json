@@ -1,0 +1,18 @@
+﻿{
+    "container":  "admin-proyectos-db-ci",
+    "database":  "ci_gestor",
+    "user":  "ci_runner",
+    "publishedPorts":  {
+
+                       },
+    "tmpfs":  {
+                  "/var/lib/mysql":  "rw,noexec,nosuid,size=512m"
+              },
+    "mounts":  [
+
+               ],
+    "grants":  [
+                   "GRANT USAGE ON *.* TO `ci_runner`@`%`",
+                   "GRANT ALL PRIVILEGES ON `ci\\\\_gestor`.* TO `ci_runner`@`%`"
+               ]
+}

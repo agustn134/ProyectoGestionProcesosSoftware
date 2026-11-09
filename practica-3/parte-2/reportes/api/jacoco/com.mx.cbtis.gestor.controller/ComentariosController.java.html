@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ComentariosController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Ejercicio5MyAPIGestor</a> &gt; <a href="index.source.html" class="el_package">com.mx.cbtis.gestor.controller</a> &gt; <span class="el_source">ComentariosController.java</span></div><h1>ComentariosController.java</h1><pre class="source lang-java linenums">package com.mx.cbtis.gestor.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+import jakarta.validation.Valid;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
+import com.mx.cbtis.gestor.dto.*;
+import com.mx.cbtis.gestor.modelo.Comentarios;
+import com.mx.cbtis.gestor.repository.ComentariosRepository;
+
+@RestController
+public class ComentariosController {
+    private final ComentariosRepository comentariostable;
+
+<span class="fc" id="L17">    public ComentariosController(ComentariosRepository repository) {</span>
+<span class="fc" id="L18">        this.comentariostable = repository;</span>
+<span class="fc" id="L19">    }</span>
+
+    @PostMapping(&quot;/getComentario&quot;)
+    public List&lt;Comentarios&gt; getComentario(@Valid @RequestBody TareaFiltroRequest request) {
+<span class="fc" id="L23">        return comentariostable.findByTarea(request.id_tarea());</span>
+    }
+
+    @GetMapping(&quot;/buscarComentario&quot;)
+    public Comentarios getComentario(@RequestParam int id) {
+<span class="fc" id="L28">        requireId(id);</span>
+<span class="fc" id="L29">        return comentariostable.findById(id)</span>
+<span class="fc" id="L30">            .orElseThrow(() -&gt; new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Registro no encontrado.&quot;));</span>
+    }
+
+    @PostMapping(&quot;/addComentario&quot;)
+    public int addComentario(@Valid @RequestBody ComentarioRequest request) {
+<span class="fc bfc" id="L35" title="All 2 branches covered.">        if (request.id_comentario() != null) {</span>
+<span class="fc" id="L36">            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, &quot;El alta no acepta un ID existente.&quot;);</span>
+        }
+<span class="fc" id="L38">        comentariostable.save(request.toEntity());</span>
+<span class="fc" id="L39">        return 1;</span>
+    }
+
+    @PostMapping(&quot;/updateComentario&quot;)
+    public int updateComentario(@Valid @RequestBody ComentarioRequest request) {
+<span class="fc" id="L44">        requireExisting(request.id_comentario());</span>
+<span class="fc" id="L45">        comentariostable.save(request.toEntity());</span>
+<span class="fc" id="L46">        return 1;</span>
+    }
+
+    @DeleteMapping(&quot;/deleteComentario&quot;)
+    public int deleteComentario(@Valid @RequestBody ComentarioIdRequest request) {
+<span class="fc" id="L51">        requireExisting(request.id_comentario());</span>
+<span class="fc" id="L52">        comentariostable.deleteById(request.id_comentario());</span>
+<span class="fc" id="L53">        return 1;</span>
+    }
+
+    @PostMapping(&quot;/buscarComentarios&quot;)
+    public List&lt;Comentarios&gt; getComentarios() {
+<span class="fc" id="L58">        List&lt;Comentarios&gt; values = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L59">        comentariostable.findAll().forEach(values::add);</span>
+<span class="fc" id="L60">        return values;</span>
+    }
+
+    private void requireExisting(Integer id) {
+<span class="fc" id="L64">        requireId(id);</span>
+<span class="fc bfc" id="L65" title="All 2 branches covered.">        if (!comentariostable.existsById(id)) {</span>
+<span class="fc" id="L66">            throw new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Registro no encontrado.&quot;);</span>
+        }
+<span class="fc" id="L68">    }</span>
+
+    private void requireId(Integer id) {
+<span class="fc bfc" id="L71" title="All 4 branches covered.">        if (id == null || id &lt;= 0) {</span>
+<span class="fc" id="L72">            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, &quot;El ID debe ser positivo.&quot;);</span>
+        }
+<span class="fc" id="L74">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

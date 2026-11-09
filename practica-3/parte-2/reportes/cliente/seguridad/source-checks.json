@@ -1,0 +1,71 @@
+{
+  "tool": "comprobaciones-locales-ci",
+  "version": "1.0",
+  "scope": [
+    "Ejercicio5Cliente"
+  ],
+  "limitations": "Tres reglas explícitas; no reemplaza SAST, SCA ni revisión manual.",
+  "exclusions": [
+    ".git",
+    ".idea",
+    ".tools",
+    "ci-reports",
+    "entrega-unidad2",
+    "practica-3",
+    "target"
+  ],
+  "omittedDirectoriesObserved": [
+    "target"
+  ],
+  "scannedFiles": [
+    {
+      "path": "Ejercicio5Cliente/src/main/java/com/mx/cbtis/Ejercicio5ClienteApplication.java",
+      "sha256": "0f7306ca9b54d32bde19417331aae2550141f5f3eb5b5b1e14fed833f399c9f7"
+    },
+    {
+      "path": "Ejercicio5Cliente/src/main/java/com/mx/cbtis/controller/GestorController.java",
+      "sha256": "154d0545d8bcee0af8ca60e5a930d4ef3f8f76b2dc86a28b13d4b8c6432845ee"
+    },
+    {
+      "path": "Ejercicio5Cliente/src/main/java/com/mx/cbtis/modelo/Asignaciones.java",
+      "sha256": "3dbc66abd9c3ed082440890c944a355a828b64c4037e7321e92c1d582b9bdba2"
+    },
+    {
+      "path": "Ejercicio5Cliente/src/main/java/com/mx/cbtis/modelo/Comentarios.java",
+      "sha256": "998bf82bb2113e7c805a09e3b092741641f7ee1ac62925243c4fa30321cd140b"
+    },
+    {
+      "path": "Ejercicio5Cliente/src/main/java/com/mx/cbtis/modelo/Proyectos.java",
+      "sha256": "60a0484071f8cc9048a728c99105b836b341fdcecec8124ccf9a54f0fbd624e8"
+    },
+    {
+      "path": "Ejercicio5Cliente/src/main/java/com/mx/cbtis/modelo/Tareas.java",
+      "sha256": "95b93cc7b82728634f2e0d45e52853e1cdffb1a97ccabbbc857c71b39e797127"
+    },
+    {
+      "path": "Ejercicio5Cliente/src/main/java/com/mx/cbtis/modelo/Usuario.java",
+      "sha256": "cef4e6595e741682dec69bf92f722722557743bb68c82adb5e425710a8c6f960"
+    },
+    {
+      "path": "Ejercicio5Cliente/src/main/resources/application.properties",
+      "sha256": "6d3729bc1d08ff6bfc9872e8b93b9ef8f08ad94aca8307467be136802da68b4b"
+    },
+    {
+      "path": "Ejercicio5Cliente/src/test/java/com/mx/cbtis/bromitas/Ejercicio5ClienteApplicationTests.java",
+      "sha256": "1e0d1ad30a812b4eb55066ece34d22a9babd3bc7b6738feddcb5a8c6f3473efd"
+    },
+    {
+      "path": "Ejercicio5Cliente/src/test/java/com/mx/cbtis/controller/GestorControllerContractTests.java",
+      "sha256": "12894dfe9016fc805cdef0b72eaa573279cb502bb432f5d76ed8efca6150e8f0"
+    },
+    {
+      "path": "Ejercicio5Cliente/src/test/java/com/mx/cbtis/controller/ProyectosClienteTests.java",
+      "sha256": "1b9324af1bee60784071636ec1a95006ee325387a50bcbf8de62c07d05a2b130"
+    },
+    {
+      "path": "Ejercicio5Cliente/src/test/java/com/mx/cbtis/modelo/ModeloJsonContractTests.java",
+      "sha256": "a331512714a70dae520b8b26f176a8af2babd63f4fce69fb5fe43b80ce4a4eec"
+    }
+  ],
+  "findings": []
+}

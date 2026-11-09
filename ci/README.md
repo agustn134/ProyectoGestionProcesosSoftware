@@ -28,4 +28,6 @@ Los tres trabajos se configuran desde SCM con la rama featured/parte-2. Los trab
 
 Los reportes quedan en ci-reports/<módulo>/ y en los artefactos de Jenkins. No se convierten errores en resultados limpios ni se suprimen vulnerabilidades para aprobar.
 
+OSV conserva dos avisos de Spring por servicio, con revisión contextual limitada y vencimiento; el resultado es PASS_WITH_CONTEXTUAL_EXCEPTIONS. Consultar [el documento técnico](../practica-3/parte-2/DOCUMENTO_TECNICO.md) y los JSON completos; no se presentan como cero avisos ni bibliotecas corregidas.
+
 Configuración para el equipo de la práctica: un ejecutor, MAVEN_OPTS=-Xmx512m y JAVA_TOOL_OPTIONS=-Xmx768m por job. Los trabajos esperan su turno; no se reduce la suite ni el umbral de cobertura.
