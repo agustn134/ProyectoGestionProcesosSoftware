@@ -1,0 +1,12 @@
+title = "Parte 2: reglas predeterminadas; código fuente incluido"
+[extend]
+useDefault = true
+[[allowlists]]
+description = "Artefactos generados/evidencia y metadatos Git; ningún src excluido"
+paths = [
+  '''(^|/)target/''',
+  '''(^|/)practica-3/''',
+  '''(^|/)entrega-unidad2/''',
+  '''(^|/)ci-reports/''',
+  '''(^|/)\.git/'''
+]

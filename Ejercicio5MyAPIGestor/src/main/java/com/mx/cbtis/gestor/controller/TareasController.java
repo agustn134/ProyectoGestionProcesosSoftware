@@ -2,86 +2,74 @@ package com.mx.cbtis.gestor.controller;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-
+import jakarta.validation.Valid;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
+import com.mx.cbtis.gestor.dto.*;
 import com.mx.cbtis.gestor.modelo.Tareas;
-import com.mx.cbtis.gestor.modelo.Usuario;
 import com.mx.cbtis.gestor.repository.TareasRepository;
 
 @RestController
 public class TareasController {
-	
-	@Autowired
-	TareasRepository tareastable;
-	
-	@PostMapping("/getTarea")
-	public List<Tareas> getTarea(@RequestBody Tareas id_proyecto) {
-		List<Tareas> listaTareas = tareastable.findByIdProyecto(id_proyecto.getId_proyecto());
-		return listaTareas;
-	}
-	
-	@GetMapping("/buscarTarea")
-	public Tareas getTarea(@RequestParam int id_tarea) {
-		
-		Tareas buscar = new Tareas();
-		Optional<Tareas> tarea = tareastable.findById(id_tarea);
-		if(tarea.isPresent()) {
-			buscar = tarea.get();
-		}
-		
-		return buscar;
-	}
-	
-	@PostMapping("/addTareas")
-	public int addTareas(@RequestBody Tareas tareas) {
-		
-		int flag = 0;
-		if(!tareas.equals(null)) {
-			tareastable.save(tareas);
-			flag = 1;
-		}
-		
-		return flag;
-	}
-	
-	@PostMapping("/updateTareas")
-	public int updateTareas(@RequestBody Tareas tareas) {
-		
-		int flag = 0;
-		if(!tareas.equals(null)) {
-			tareastable.save(tareas);
-			flag = 1;
-		}
-		
-		return flag;
-	}
-	
-	@DeleteMapping("/deleteTareas")
-	public int deleteTareas(@RequestBody Tareas tareas) {
-		
-		int flag = 0;
-		if(!tareas.equals(null)) {
-			tareastable.delete(tareas);
-			flag = 1;
-		}
-		
-		return flag;
-	}
-	
-	@PostMapping("/buscarTareas")
-	public List<Tareas> getTareas(){
-		
-		List<Tareas> listaTareas = new ArrayList<>();
-		tareastable.findAll().forEach(listaTareas :: add);
-		return listaTareas;
-	}
+    private final TareasRepository tareastable;
 
+    public TareasController(TareasRepository repository) {
+        this.tareastable = repository;
+    }
+
+    @PostMapping("/getTarea")
+    public List<Tareas> getTarea(@Valid @RequestBody ProyectoFiltroRequest request) {
+        return tareastable.findByIdProyecto(request.id_proyecto());
+    }
+
+    @GetMapping("/buscarTarea")
+    public Tareas getTarea(@RequestParam int id_tarea) {
+        requireId(id_tarea);
+        return tareastable.findById(id_tarea)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Registro no encontrado."));
+    }
+
+    @PostMapping("/addTareas")
+    public int addTareas(@Valid @RequestBody TareaRequest request) {
+        if (request.id_tarea() != null) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "El alta no acepta un ID existente.");
+        }
+        tareastable.save(request.toEntity());
+        return 1;
+    }
+
+    @PostMapping("/updateTareas")
+    public int updateTareas(@Valid @RequestBody TareaRequest request) {
+        requireExisting(request.id_tarea());
+        tareastable.save(request.toEntity());
+        return 1;
+    }
+
+    @DeleteMapping("/deleteTareas")
+    public int deleteTareas(@Valid @RequestBody TareaIdRequest request) {
+        requireExisting(request.id_tarea());
+        tareastable.deleteById(request.id_tarea());
+        return 1;
+    }
+
+    @PostMapping("/buscarTareas")
+    public List<Tareas> getTareas() {
+        List<Tareas> values = new ArrayList<>();
+        tareastable.findAll().forEach(values::add);
+        return values;
+    }
+
+    private void requireExisting(Integer id) {
+        requireId(id);
+        if (!tareastable.existsById(id)) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Registro no encontrado.");
+        }
+    }
+
+    private void requireId(Integer id) {
+        if (id == null || id <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "El ID debe ser positivo.");
+        }
+    }
 }

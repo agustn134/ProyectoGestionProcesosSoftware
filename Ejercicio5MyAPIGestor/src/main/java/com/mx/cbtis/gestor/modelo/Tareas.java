@@ -2,21 +2,26 @@ package com.mx.cbtis.gestor.modelo;
 
 import java.time.LocalDate;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Column;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
 public class Tareas {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id_tarea;
+	@Column(length = 100)
 	private String nombre;
+	@Column(length = 100)
 	private String descripcion;
 	private LocalDate fecha_vencimiento;
+	@Column(length = 255)
 	private String lista;
+	@Column(length = 255)
 	private String estado;
 	private Integer id_proyecto;
 

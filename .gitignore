@@ -1,5 +1,10 @@
 **/target/
 .idea/
 .env
+.env.*
+!.env.example
 *.log
 .DS_Store
+ci-reports/
+__pycache__/
+*.py[cod]

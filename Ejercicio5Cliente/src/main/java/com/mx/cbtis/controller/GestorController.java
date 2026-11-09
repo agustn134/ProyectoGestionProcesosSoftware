@@ -67,11 +67,29 @@ public class GestorController {
                    
     	RestTemplate template = new RestTemplate();
     	String urlservicebd = "http://localhost:8081/addUsuario";
-    	ResponseEntity<Integer> response = template.postForEntity(urlservicebd,usuario,Integer.class);
-
-    	return new ModelAndView("redirect:/login");
+        try {
+            ResponseEntity<Integer> response = template.postForEntity(urlservicebd,usuario,Integer.class);
+            if (!Integer.valueOf(1).equals(response.getBody())) {
+                return registroConError(usuario, "El servicio no confirmó el registro. Intenta nuevamente.", HttpStatus.BAD_GATEWAY);
+            }
+            return new ModelAndView("redirect:/login");
+        } catch (HttpClientErrorException ex) {
+            return registroConError(usuario, "Revisa los datos del registro y utiliza una contraseña válida.",
+                HttpStatus.valueOf(ex.getStatusCode().value()));
+        } catch (RestClientException ex) {
+            return registroConError(usuario, "No se pudo conectar con el servicio. Intenta nuevamente.", HttpStatus.BAD_GATEWAY);
+        }
 
 	}
+
+    private ModelAndView registroConError(Usuario usuario, String mensaje, HttpStatus status) {
+        usuario.setContrasena(null);
+        ModelAndView result=new ModelAndView("register");
+        result.setStatus(status);
+        result.addObject("usuario",usuario);
+        result.addObject("errorRegistro",mensaje);
+        return result;
+    }
 	
 	@GetMapping("/inicio")
 	public String getInicio(Model modelo) {
@@ -203,9 +221,19 @@ public class GestorController {
 	public ResponseEntity<Usuario> verificarUsuario(@RequestBody Usuario paramUser) {
 		String urlservicebd = "http://localhost:8081/getUsuarioLogin";
 		RestTemplate  template = new RestTemplate();
-		ResponseEntity<Usuario> response = template.postForEntity(urlservicebd,paramUser,Usuario.class);
-		
-		return response;
+		try {
+			ResponseEntity<Usuario> response = template.postForEntity(urlservicebd,paramUser,Usuario.class);
+			Usuario usuario = response.getBody();
+			if (usuario == null || usuario.getId_usuario() == null) {
+				return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+			}
+			usuario.setContrasena(null);
+			return response;
+		} catch (HttpClientErrorException.Unauthorized ex) {
+			return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+		} catch (RestClientException ex) {
+			return ResponseEntity.status(HttpStatus.BAD_GATEWAY).build();
+		}
 
 	}
 	

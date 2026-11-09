@@ -28,6 +28,7 @@
     <div class="container m-auto">
         <form class="p-5 bg-light bg-opacity-75 rounded mt-5 needs-validation" novalidate method="post" th:action="saveUsuario" th:object="${usuario}">
             <h2>Registrate</h2>
+            <p th:if="${errorRegistro}" th:text="${errorRegistro}" class="alert alert-danger" role="alert"></p>
             <div class="mb-3">
                 <label class="form-label">Nombre(completo)</label>
                 <input type="text" class="form-control" th:field="*{nombre}" required>
@@ -41,16 +42,7 @@
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Contrase&ntilde;a</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" th:field="*{contrasena}" required>
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputRol1" class="form-label">Rol</label>
-              <select class="form-select" th:field="*{rol}" required>
-				  <option value="0">Seleccione una opci&oacute;n</option>
-				  <option value="Estudiante">Estudiante</option>
-				  <option value="Docente">Docente</option>
-				  <option value="Otro">Otro</option>
-			  </select>
+              <input type="password" class="form-control" id="exampleInputPassword1" th:field="*{contrasena}" minlength="8" maxlength="72" autocomplete="new-password" required>
             </div>
             <input type="hidden" id="imagenUsuario" th:field="*{imagen_usuario}">
             <button type="submit" class="btn btn-primary" th:onclick="getRandomColor();">Registrar</button>

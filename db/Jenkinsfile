@@ -1,0 +1,69 @@
+pipeline {
+    agent any
+
+    tools {
+        jdk 'JDK21'
+        maven 'Maven3'
+    }
+
+    options {
+        skipDefaultCheckout(true)
+        disableConcurrentBuilds()
+        timeout(time: 20, unit: 'MINUTES')
+        buildDiscarder(logRotator(numToKeepStr: '10'))
+    }
+
+    environment {
+        CI_DB_URL = 'jdbc:mariadb://admin-proyectos-db-ci:3306/ci_gestor'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+                sh 'test -f db/schema.sql && test -f db-tests/pom.xml'
+            }
+        }
+
+        stage('Verificar versiones') {
+            steps {
+                sh 'java -version'
+                sh 'mvn -version'
+            }
+        }
+
+        stage('Importar y probar base CI') {
+            steps {
+                withCredentials([usernamePassword(credentialsId: 'ci-db',
+                    usernameVariable: 'CI_DB_USER', passwordVariable: 'CI_DB_PASSWORD')]) {
+                    sh 'mvn -B -ntp -f db-tests/pom.xml clean verify'
+                }
+            }
+            post {
+                always {
+                    junit testResults: 'db-tests/target/surefire-reports/TEST-*.xml',
+                          allowEmptyResults: false
+                }
+            }
+        }
+
+        stage('Analizar esquema fuente') {
+            steps {
+                sh 'python3 ci/scan_source.py --paths db --output ci-reports/db-tests/schema-source-checks.json'
+            }
+        }
+
+        stage('Analizar dependencias y secretos') {
+            steps {
+                sh 'sh ci/security_scan.sh db-tests'
+            }
+        }
+    }
+
+    post {
+        always {
+            archiveArtifacts artifacts: 'db-tests/target/surefire-reports/**,ci-reports/db-tests/**',
+                             allowEmptyArchive: true, fingerprint: true
+        }
+    }
+}

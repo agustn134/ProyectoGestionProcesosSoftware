@@ -2,86 +2,74 @@ package com.mx.cbtis.gestor.controller;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-
+import jakarta.validation.Valid;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
+import com.mx.cbtis.gestor.dto.*;
 import com.mx.cbtis.gestor.modelo.Comentarios;
 import com.mx.cbtis.gestor.repository.ComentariosRepository;
 
 @RestController
 public class ComentariosController {
-	
-	@Autowired
-	ComentariosRepository comentariostable;
-	
-	@PostMapping("/getComentario")
+    private final ComentariosRepository comentariostable;
 
-	public List<Comentarios> getComentario(@RequestBody Comentarios idComentario){
-		List<Comentarios> listaComentarios = comentariostable.findByTarea(idComentario.getId_tarea());
-		return listaComentarios;
-	}
-	
-	@GetMapping("/buscarComentario")
-	public Comentarios getComentario(@RequestParam int id) {
-		
-		Comentarios buscar = new Comentarios();
-		Optional<Comentarios> comentario = comentariostable.findById(id);
-		if(comentario.isPresent()) {
-			buscar = comentario.get();
-		}
-		
-		return buscar;
-	}
-	
-	@PostMapping("/addComentario")
-	public int addComentario(@RequestBody Comentarios comentario) {
-		
-		int flag = 0;
-		if(!comentario.equals(null)) {
-			comentariostable.save(comentario);
-			flag = 1;
-		}
-		
-		return flag;
-	}
-	
-	@PostMapping("/updateComentario")
-	public int updateComentario(@RequestBody Comentarios comentario) {
-		
-		int flag = 0;
-		if(!comentario.equals(null)) {
-			comentariostable.save(comentario);
-			flag = 1;
-		}
-		
-		return flag;
-	}
-	
-	@DeleteMapping("/deleteComentario")
-	public int deleteComentario(@RequestBody Comentarios comentario) {
-		
-		int flag = 0;
-		if(!comentario.equals(null)) {
-			comentariostable.delete(comentario);
-			flag = 1;
-		}
-		
-		return flag;
-	}
-	
-	@PostMapping("/buscarComentarios")
-	public List<Comentarios> getComentarios(){
-		
-		List<Comentarios> listaComentarios = new ArrayList<>();
-		comentariostable.findAll().forEach(listaComentarios :: add);
-		return listaComentarios;
-	}
+    public ComentariosController(ComentariosRepository repository) {
+        this.comentariostable = repository;
+    }
 
+    @PostMapping("/getComentario")
+    public List<Comentarios> getComentario(@Valid @RequestBody TareaFiltroRequest request) {
+        return comentariostable.findByTarea(request.id_tarea());
+    }
+
+    @GetMapping("/buscarComentario")
+    public Comentarios getComentario(@RequestParam int id) {
+        requireId(id);
+        return comentariostable.findById(id)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Registro no encontrado."));
+    }
+
+    @PostMapping("/addComentario")
+    public int addComentario(@Valid @RequestBody ComentarioRequest request) {
+        if (request.id_comentario() != null) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "El alta no acepta un ID existente.");
+        }
+        comentariostable.save(request.toEntity());
+        return 1;
+    }
+
+    @PostMapping("/updateComentario")
+    public int updateComentario(@Valid @RequestBody ComentarioRequest request) {
+        requireExisting(request.id_comentario());
+        comentariostable.save(request.toEntity());
+        return 1;
+    }
+
+    @DeleteMapping("/deleteComentario")
+    public int deleteComentario(@Valid @RequestBody ComentarioIdRequest request) {
+        requireExisting(request.id_comentario());
+        comentariostable.deleteById(request.id_comentario());
+        return 1;
+    }
+
+    @PostMapping("/buscarComentarios")
+    public List<Comentarios> getComentarios() {
+        List<Comentarios> values = new ArrayList<>();
+        comentariostable.findAll().forEach(values::add);
+        return values;
+    }
+
+    private void requireExisting(Integer id) {
+        requireId(id);
+        if (!comentariostable.existsById(id)) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Registro no encontrado.");
+        }
+    }
+
+    private void requireId(Integer id) {
+        if (id == null || id <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "El ID debe ser positivo.");
+        }
+    }
 }

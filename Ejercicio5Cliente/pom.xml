@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.2.5</version>
+		<version>3.5.16</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.mx.cbtis</groupId>
@@ -15,6 +15,9 @@
 	<description>Interfaz del Gestor de Proyectos</description>
 	<properties>
 		<java.version>21</java.version>
+        <jackson-bom.version>2.21.8</jackson-bom.version>
+        <tomcat.version>10.1.61</tomcat.version>
+        <log4j2.version>2.26.1</log4j2.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -52,6 +55,10 @@
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.12</version>
+                <configuration>
+                    <!-- Only the Spring Boot process entry point is infrastructure, not evaluable business code. -->
+                    <excludes><exclude>**/Ejercicio5ClienteApplication.class</exclude></excludes>
+                </configuration>
                 <executions>
                     <execution>
                         <id>coverage-agent</id>
@@ -61,6 +68,19 @@
                         <id>coverage-report</id>
                         <phase>verify</phase>
                         <goals><goal>report</goal></goals>
+                    </execution>
+                    <execution>
+                        <id>coverage-methods-required</id>
+                        <phase>verify</phase>
+                        <goals><goal>check</goal></goals>
+                        <configuration>
+                            <rules>
+                                <rule>
+                                    <element>BUNDLE</element>
+                                    <limits><limit><counter>METHOD</counter><value>COVEREDRATIO</value><minimum>1.0</minimum></limit></limits>
+                                </rule>
+                            </rules>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>

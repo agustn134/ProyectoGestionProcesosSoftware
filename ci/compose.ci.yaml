@@ -1,0 +1,16 @@
+services:
+  db-ci:
+    image: mariadb:11.4-noble
+    container_name: admin-proyectos-db-ci
+    environment:
+      MARIADB_DATABASE: ci_gestor
+      MARIADB_USER: ci_runner
+      MARIADB_PASSWORD: ${CI_DB_PASSWORD:?Defina CI_DB_PASSWORD fuera de Git}
+      MARIADB_ROOT_PASSWORD: ${CI_DB_ROOT_PASSWORD:?Defina CI_DB_ROOT_PASSWORD fuera de Git}
+    tmpfs:
+      - /var/lib/mysql:rw,noexec,nosuid,size=512m
+    networks:
+      - calidad-practica3
+networks:
+  calidad-practica3:
+    external: true

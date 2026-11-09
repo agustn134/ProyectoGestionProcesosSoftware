@@ -1,0 +1,1778 @@
+{
+  "total": 38,
+  "p": 1,
+  "ps": 500,
+  "paging": {
+    "pageIndex": 1,
+    "pageSize": 500,
+    "total": 38
+  },
+  "effortTotal": 430,
+  "issues": [
+    {
+      "key": "91d2853f-7ab0-43e6-942c-538919afbbd6",
+      "rule": "java:S6813",
+      "severity": "MAJOR",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/AsignacionesController.java",
+      "project": "ejercicio5-api",
+      "line": 22,
+      "hash": "0132ec8cee01c5dd244e1a60fe6448a1",
+      "textRange": {
+        "startLine": 22,
+        "endLine": 22,
+        "startOffset": 1,
+        "endOffset": 11
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this field injection and use constructor injection instead.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        },
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "a8b59c70-19e2-44b2-8021-78718962d57d",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/AsignacionesController.java",
+      "project": "ejercicio5-api",
+      "line": 38,
+      "hash": "a18ae5b4c4399afa221254f35d43eed5",
+      "textRange": {
+        "startLine": 38,
+        "endLine": 38,
+        "startOffset": 52,
+        "endOffset": 62
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [
+        "cwe",
+        "spring"
+      ],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "d845c43b-fb2f-469e-8fa7-b3bff0afe51a",
+      "rule": "java:S2159",
+      "severity": "MAJOR",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/AsignacionesController.java",
+      "project": "ejercicio5-api",
+      "line": 41,
+      "hash": "25380ccebbbdbf5ba4e1168416cd2a33",
+      "textRange": {
+        "startLine": 41,
+        "endLine": 41,
+        "startOffset": 17,
+        "endOffset": 23
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this call to \"equals\"; comparisons against null always return false; consider using '== null' to check for nullity.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [
+        "cert",
+        "unused"
+      ],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "ec038f39-3812-4a8d-89dc-79f0db94badb",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/AsignacionesController.java",
+      "project": "ejercicio5-api",
+      "line": 51,
+      "hash": "7eb6adc7b2e1e9281edc820b810f6c82",
+      "textRange": {
+        "startLine": 51,
+        "endLine": 51,
+        "startOffset": 55,
+        "endOffset": 65
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [
+        "cwe",
+        "spring"
+      ],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "9a2a1589-265e-4780-9484-a8d572dcb89c",
+      "rule": "java:S2159",
+      "severity": "MAJOR",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/AsignacionesController.java",
+      "project": "ejercicio5-api",
+      "line": 54,
+      "hash": "25380ccebbbdbf5ba4e1168416cd2a33",
+      "textRange": {
+        "startLine": 54,
+        "endLine": 54,
+        "startOffset": 17,
+        "endOffset": 23
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this call to \"equals\"; comparisons against null always return false; consider using '== null' to check for nullity.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [
+        "cert",
+        "unused"
+      ],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "bcb08762-752f-4cea-94da-7fd4b5bb1551",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/AsignacionesController.java",
+      "project": "ejercicio5-api",
+      "line": 63,
+      "hash": "181e093db34953ce8e73fd34ac6ba19f",
+      "textRange": {
+        "startLine": 63,
+        "endLine": 63,
+        "startOffset": 55,
+        "endOffset": 65
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [
+        "cwe",
+        "spring"
+      ],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "d7cdae8f-80c4-4575-b56d-3d5b05319c31",
+      "rule": "java:S2159",
+      "severity": "MAJOR",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/AsignacionesController.java",
+      "project": "ejercicio5-api",
+      "line": 66,
+      "hash": "25380ccebbbdbf5ba4e1168416cd2a33",
+      "textRange": {
+        "startLine": 66,
+        "endLine": 66,
+        "startOffset": 17,
+        "endOffset": 23
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this call to \"equals\"; comparisons against null always return false; consider using '== null' to check for nullity.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [
+        "cert",
+        "unused"
+      ],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "51a9a5ec-1edb-47b9-9e27-602bcaff59c9",
+      "rule": "java:S6813",
+      "severity": "MAJOR",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/ComentariosController.java",
+      "project": "ejercicio5-api",
+      "line": 21,
+      "hash": "0132ec8cee01c5dd244e1a60fe6448a1",
+      "textRange": {
+        "startLine": 21,
+        "endLine": 21,
+        "startOffset": 1,
+        "endOffset": 11
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this field injection and use constructor injection instead.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        },
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "ca117b90-100e-4e0b-9927-893217f83d6f",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/ComentariosController.java",
+      "project": "ejercicio5-api",
+      "line": 26,
+      "hash": "dae9d6af5db9a254f92cf01c46ca2fac",
+      "textRange": {
+        "startLine": 26,
+        "endLine": 26,
+        "startOffset": 65,
+        "endOffset": 77
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [
+        "cwe",
+        "spring"
+      ],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "de87d690-7f89-4961-9051-a6a4cf9539bb",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/ComentariosController.java",
+      "project": "ejercicio5-api",
+      "line": 44,
+      "hash": "d59976f208e43d3cc77ac76ba6de8ea7",
+      "textRange": {
+        "startLine": 44,
+        "endLine": 44,
+        "startOffset": 51,
+        "endOffset": 61
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [
+        "cwe",
+        "spring"
+      ],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "ae9e0339-6490-4133-aae0-710292933c50",
+      "rule": "java:S2159",
+      "severity": "MAJOR",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/ComentariosController.java",
+      "project": "ejercicio5-api",
+      "line": 47,
+      "hash": "05c98d061c58e25d7734473500a61d1e",
+      "textRange": {
+        "startLine": 47,
+        "endLine": 47,
+        "startOffset": 17,
+        "endOffset": 23
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this call to \"equals\"; comparisons against null always return false; consider using '== null' to check for nullity.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [
+        "cert",
+        "unused"
+      ],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "958ce1c0-97d1-4acf-b7f5-e90ef5b6013d",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/ComentariosController.java",
+      "project": "ejercicio5-api",
+      "line": 56,
+      "hash": "271931e4371bfeca90a5b3092f5c3e90",
+      "textRange": {
+        "startLine": 56,
+        "endLine": 56,
+        "startOffset": 54,
+        "endOffset": 64
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [
+        "cwe",
+        "spring"
+      ],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "0263549a-9fba-4c39-a2db-7f7a822e3619",
+      "rule": "java:S2159",
+      "severity": "MAJOR",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/ComentariosController.java",
+      "project": "ejercicio5-api",
+      "line": 59,
+      "hash": "05c98d061c58e25d7734473500a61d1e",
+      "textRange": {
+        "startLine": 59,
+        "endLine": 59,
+        "startOffset": 17,
+        "endOffset": 23
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this call to \"equals\"; comparisons against null always return false; consider using '== null' to check for nullity.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [
+        "cert",
+        "unused"
+      ],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "6995df8e-a176-405a-9f57-7bfdec22b6d2",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/ComentariosController.java",
+      "project": "ejercicio5-api",
+      "line": 68,
+      "hash": "f56623f48b6633761870a0c8c92ff33c",
+      "textRange": {
+        "startLine": 68,
+        "endLine": 68,
+        "startOffset": 54,
+        "endOffset": 64
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [
+        "cwe",
+        "spring"
+      ],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "8eecb8a7-0dbb-462c-a936-6ff158df1884",
+      "rule": "java:S2159",
+      "severity": "MAJOR",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/ComentariosController.java",
+      "project": "ejercicio5-api",
+      "line": 71,
+      "hash": "05c98d061c58e25d7734473500a61d1e",
+      "textRange": {
+        "startLine": 71,
+        "endLine": 71,
+        "startOffset": 17,
+        "endOffset": 23
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this call to \"equals\"; comparisons against null always return false; consider using '== null' to check for nullity.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [
+        "cert",
+        "unused"
+      ],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "253991f9-0788-4763-9890-2b6809597cb1",
+      "rule": "java:S6813",
+      "severity": "MAJOR",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/ProyectosController.java",
+      "project": "ejercicio5-api",
+      "line": 21,
+      "hash": "0132ec8cee01c5dd244e1a60fe6448a1",
+      "textRange": {
+        "startLine": 21,
+        "endLine": 21,
+        "startOffset": 1,
+        "endOffset": 11
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this field injection and use constructor injection instead.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        },
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "5f39a36f-a01d-44c8-b6e1-59fab7509c79",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/ProyectosController.java",
+      "project": "ejercicio5-api",
+      "line": 49,
+      "hash": "8a831cb232ef3d3d164d9dea3cd902c0",
+      "textRange": {
+        "startLine": 49,
+        "endLine": 49,
+        "startOffset": 47,
+        "endOffset": 55
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [
+        "cwe",
+        "spring"
+      ],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "6a93f232-44f4-4840-ad3c-46c85fe592e3",
+      "rule": "java:S2159",
+      "severity": "MAJOR",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/ProyectosController.java",
+      "project": "ejercicio5-api",
+      "line": 52,
+      "hash": "5c9741dee951f248e77f81599f390b38",
+      "textRange": {
+        "startLine": 52,
+        "endLine": 52,
+        "startOffset": 15,
+        "endOffset": 21
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this call to \"equals\"; comparisons against null always return false; consider using '== null' to check for nullity.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [
+        "cert",
+        "unused"
+      ],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "2ec42063-fe2c-4c65-81bb-5fdb62296e49",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/ProyectosController.java",
+      "project": "ejercicio5-api",
+      "line": 62,
+      "hash": "328e20593f01a37fe038abd78a4c2adc",
+      "textRange": {
+        "startLine": 62,
+        "endLine": 62,
+        "startOffset": 50,
+        "endOffset": 58
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [
+        "cwe",
+        "spring"
+      ],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "8e65cc9e-b144-4edb-9bd4-64cefc24a626",
+      "rule": "java:S2159",
+      "severity": "MAJOR",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/ProyectosController.java",
+      "project": "ejercicio5-api",
+      "line": 65,
+      "hash": "5c9741dee951f248e77f81599f390b38",
+      "textRange": {
+        "startLine": 65,
+        "endLine": 65,
+        "startOffset": 15,
+        "endOffset": 21
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this call to \"equals\"; comparisons against null always return false; consider using '== null' to check for nullity.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [
+        "cert",
+        "unused"
+      ],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "414e8ea6-bc04-4c09-9e16-4b372b19cfd2",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/ProyectosController.java",
+      "project": "ejercicio5-api",
+      "line": 74,
+      "hash": "73156a4e54cb8b132cdf2f4cef2ea5c5",
+      "textRange": {
+        "startLine": 74,
+        "endLine": 74,
+        "startOffset": 50,
+        "endOffset": 58
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [
+        "cwe",
+        "spring"
+      ],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "246d59be-355b-4b02-87fa-5b4181afe3c8",
+      "rule": "java:S2159",
+      "severity": "MAJOR",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/ProyectosController.java",
+      "project": "ejercicio5-api",
+      "line": 77,
+      "hash": "5c9741dee951f248e77f81599f390b38",
+      "textRange": {
+        "startLine": 77,
+        "endLine": 77,
+        "startOffset": 15,
+        "endOffset": 21
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this call to \"equals\"; comparisons against null always return false; consider using '== null' to check for nullity.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [
+        "cert",
+        "unused"
+      ],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "0c17035c-9a5d-4206-812e-5c08bd9156c0",
+      "rule": "java:S6813",
+      "severity": "MAJOR",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/TareasController.java",
+      "project": "ejercicio5-api",
+      "line": 22,
+      "hash": "0132ec8cee01c5dd244e1a60fe6448a1",
+      "textRange": {
+        "startLine": 22,
+        "endLine": 22,
+        "startOffset": 1,
+        "endOffset": 11
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this field injection and use constructor injection instead.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        },
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "dc9db7b8-a9e8-4a27-8ed0-3b76c68bca9d",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/TareasController.java",
+      "project": "ejercicio5-api",
+      "line": 26,
+      "hash": "5f5afb02f0d8eb7a1176aed263ef2552",
+      "textRange": {
+        "startLine": 26,
+        "endLine": 26,
+        "startOffset": 50,
+        "endOffset": 61
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [
+        "cwe",
+        "spring"
+      ],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "2b818abf-f561-4caf-a362-66846cccf3d8",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/TareasController.java",
+      "project": "ejercicio5-api",
+      "line": 44,
+      "hash": "db27721bc99e69df8ee0c289358bced4",
+      "textRange": {
+        "startLine": 44,
+        "endLine": 44,
+        "startOffset": 42,
+        "endOffset": 48
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [
+        "cwe",
+        "spring"
+      ],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "abd09ed2-88db-4abb-969e-ddf2bd38a990",
+      "rule": "java:S2159",
+      "severity": "MAJOR",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/TareasController.java",
+      "project": "ejercicio5-api",
+      "line": 47,
+      "hash": "12648d2be03b2317b92f1fa44a7570c3",
+      "textRange": {
+        "startLine": 47,
+        "endLine": 47,
+        "startOffset": 13,
+        "endOffset": 19
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this call to \"equals\"; comparisons against null always return false; consider using '== null' to check for nullity.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [
+        "cert",
+        "unused"
+      ],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "1bc8fd82-3e5b-409a-ba60-d96d131148e5",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/TareasController.java",
+      "project": "ejercicio5-api",
+      "line": 56,
+      "hash": "ae86b2354d04c466dbb3404bdf3a83f2",
+      "textRange": {
+        "startLine": 56,
+        "endLine": 56,
+        "startOffset": 45,
+        "endOffset": 51
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [
+        "cwe",
+        "spring"
+      ],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "a75dc95f-5f2e-4a37-8774-616d57aacae9",
+      "rule": "java:S2159",
+      "severity": "MAJOR",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/TareasController.java",
+      "project": "ejercicio5-api",
+      "line": 59,
+      "hash": "12648d2be03b2317b92f1fa44a7570c3",
+      "textRange": {
+        "startLine": 59,
+        "endLine": 59,
+        "startOffset": 13,
+        "endOffset": 19
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this call to \"equals\"; comparisons against null always return false; consider using '== null' to check for nullity.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [
+        "cert",
+        "unused"
+      ],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "32e6a928-f19e-4b55-a8a5-680369bd349e",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/TareasController.java",
+      "project": "ejercicio5-api",
+      "line": 68,
+      "hash": "a0f3b88fd790563c9de1febd17728673",
+      "textRange": {
+        "startLine": 68,
+        "endLine": 68,
+        "startOffset": 45,
+        "endOffset": 51
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [
+        "cwe",
+        "spring"
+      ],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "e114020a-0a79-4fa8-80e8-005eeaf95775",
+      "rule": "java:S2159",
+      "severity": "MAJOR",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/TareasController.java",
+      "project": "ejercicio5-api",
+      "line": 71,
+      "hash": "12648d2be03b2317b92f1fa44a7570c3",
+      "textRange": {
+        "startLine": 71,
+        "endLine": 71,
+        "startOffset": 13,
+        "endOffset": 19
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this call to \"equals\"; comparisons against null always return false; consider using '== null' to check for nullity.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [
+        "cert",
+        "unused"
+      ],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "16e0ce2f-6793-4104-b9fb-f7d1d5de1328",
+      "rule": "java:S6813",
+      "severity": "MAJOR",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/UsuarioController.java",
+      "project": "ejercicio5-api",
+      "line": 21,
+      "hash": "0132ec8cee01c5dd244e1a60fe6448a1",
+      "textRange": {
+        "startLine": 21,
+        "endLine": 21,
+        "startOffset": 1,
+        "endOffset": 11
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this field injection and use constructor injection instead.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        },
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "eb201ec6-216e-412b-a4e6-010199fae1dd",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/UsuarioController.java",
+      "project": "ejercicio5-api",
+      "line": 25,
+      "hash": "febc9269043a84f61fde5d0133577ea5",
+      "textRange": {
+        "startLine": 25,
+        "endLine": 25,
+        "startOffset": 53,
+        "endOffset": 62
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [
+        "cwe",
+        "spring"
+      ],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "2f8b256e-2198-4e92-a3af-f3c9ae3b0ddf",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/UsuarioController.java",
+      "project": "ejercicio5-api",
+      "line": 56,
+      "hash": "4954c433ea79a3ad6fa93220352b5460",
+      "textRange": {
+        "startLine": 56,
+        "endLine": 56,
+        "startOffset": 44,
+        "endOffset": 51
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [
+        "cwe",
+        "spring"
+      ],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "11e76e99-4137-4d58-b0fc-04e19a3f7785",
+      "rule": "java:S2159",
+      "severity": "MAJOR",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/UsuarioController.java",
+      "project": "ejercicio5-api",
+      "line": 58,
+      "hash": "7dce6c98278ee1f64a80f57905b3752b",
+      "textRange": {
+        "startLine": 58,
+        "endLine": 58,
+        "startOffset": 14,
+        "endOffset": 20
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this call to \"equals\"; comparisons against null always return false; consider using '== null' to check for nullity.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [
+        "cert",
+        "unused"
+      ],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "7cf985cc-1420-45e9-b4be-8ef0cc61ab1a",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/UsuarioController.java",
+      "project": "ejercicio5-api",
+      "line": 67,
+      "hash": "7df8aaaec725fe5df600a52dd58a7253",
+      "textRange": {
+        "startLine": 67,
+        "endLine": 67,
+        "startOffset": 47,
+        "endOffset": 54
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [
+        "cwe",
+        "spring"
+      ],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "2f0388d8-ae5d-4f16-88b7-cb6ace94cb93",
+      "rule": "java:S2159",
+      "severity": "MAJOR",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/UsuarioController.java",
+      "project": "ejercicio5-api",
+      "line": 69,
+      "hash": "7dce6c98278ee1f64a80f57905b3752b",
+      "textRange": {
+        "startLine": 69,
+        "endLine": 69,
+        "startOffset": 14,
+        "endOffset": 20
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this call to \"equals\"; comparisons against null always return false; consider using '== null' to check for nullity.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [
+        "cert",
+        "unused"
+      ],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "7eb97c7f-c7b3-4758-8a1f-250bae9d5027",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/UsuarioController.java",
+      "project": "ejercicio5-api",
+      "line": 78,
+      "hash": "3c2eae1d4042888ccfff7cf01f546e58",
+      "textRange": {
+        "startLine": 78,
+        "endLine": 78,
+        "startOffset": 47,
+        "endOffset": 54
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [
+        "cwe",
+        "spring"
+      ],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "1c8feff8-5921-4b58-bfd0-c861d0ec442f",
+      "rule": "java:S2159",
+      "severity": "MAJOR",
+      "component": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/UsuarioController.java",
+      "project": "ejercicio5-api",
+      "line": 80,
+      "hash": "7dce6c98278ee1f64a80f57905b3752b",
+      "textRange": {
+        "startLine": 80,
+        "endLine": 80,
+        "startOffset": 14,
+        "endOffset": 20
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this call to \"equals\"; comparisons against null always return false; consider using '== null' to check for nullity.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "agustinparralopez1@gmail.com",
+      "tags": [
+        "cert",
+        "unused"
+      ],
+      "creationDate": "2026-11-07T22:07:08-06:00",
+      "updateDate": "2026-11-07T23:08:11-06:00",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    }
+  ],
+  "components": [
+    {
+      "key": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/ComentariosController.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "ComentariosController.java",
+      "longName": "src/main/java/com/mx/cbtis/gestor/controller/ComentariosController.java",
+      "path": "src/main/java/com/mx/cbtis/gestor/controller/ComentariosController.java"
+    },
+    {
+      "key": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/AsignacionesController.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "AsignacionesController.java",
+      "longName": "src/main/java/com/mx/cbtis/gestor/controller/AsignacionesController.java",
+      "path": "src/main/java/com/mx/cbtis/gestor/controller/AsignacionesController.java"
+    },
+    {
+      "key": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/ProyectosController.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "ProyectosController.java",
+      "longName": "src/main/java/com/mx/cbtis/gestor/controller/ProyectosController.java",
+      "path": "src/main/java/com/mx/cbtis/gestor/controller/ProyectosController.java"
+    },
+    {
+      "key": "ejercicio5-api",
+      "enabled": true,
+      "qualifier": "TRK",
+      "name": "Ejercicio5MyAPIGestor",
+      "longName": "Ejercicio5MyAPIGestor"
+    },
+    {
+      "key": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/TareasController.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "TareasController.java",
+      "longName": "src/main/java/com/mx/cbtis/gestor/controller/TareasController.java",
+      "path": "src/main/java/com/mx/cbtis/gestor/controller/TareasController.java"
+    },
+    {
+      "key": "ejercicio5-api:src/main/java/com/mx/cbtis/gestor/controller/UsuarioController.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "UsuarioController.java",
+      "longName": "src/main/java/com/mx/cbtis/gestor/controller/UsuarioController.java",
+      "path": "src/main/java/com/mx/cbtis/gestor/controller/UsuarioController.java"
+    }
+  ],
+  "facets": []
+}
