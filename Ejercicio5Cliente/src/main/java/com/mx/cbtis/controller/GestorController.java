@@ -120,7 +120,7 @@ public class GestorController {
 
 		try {
     	RestTemplate template = new RestTemplate();
-    	String urlservicebd = apiBaseUrl + "/addProyecto";
+	    	String urlservicebd = apiBaseUrl + (proyecto.getId_proyecto() == null ? "/addProyecto" : "/updateProyecto");
     	ResponseEntity<Integer> response = template.postForEntity(urlservicebd,proyecto,Integer.class);
 		if (!Integer.valueOf(1).equals(response.getBody())) {
 			return formularioConError(proyecto, "El backend no confirmó el guardado.", HttpStatus.BAD_GATEWAY);
@@ -128,6 +128,8 @@ public class GestorController {
 
     	ModelAndView resultado = new ModelAndView("redirect:/inicio");
 		return resultado;
+		} catch (HttpClientErrorException.NotFound ex) {
+			return formularioConError(proyecto, "El proyecto ya no existe. Actualiza la lista antes de continuar.", HttpStatus.NOT_FOUND);
 		} catch (RestClientException ex) {
 			return formularioConError(proyecto, "No se pudo guardar el proyecto. Intenta nuevamente.", HttpStatus.BAD_GATEWAY);
 		}
@@ -194,6 +196,7 @@ public class GestorController {
 	}
 
 	private String validarProyecto(Proyectos proyecto) {
+		if (proyecto.getId_proyecto() != null && proyecto.getId_proyecto() <= 0) return "El ID del proyecto debe ser positivo.";
 		if (proyecto.getNombre() == null || proyecto.getNombre().isBlank()) return "El nombre es obligatorio.";
 		if (proyecto.getNombre().length() > 100) return "El nombre no debe superar 100 caracteres.";
 		if (proyecto.getDescripcion() == null || proyecto.getDescripcion().isBlank()) return "La descripción es obligatoria.";
