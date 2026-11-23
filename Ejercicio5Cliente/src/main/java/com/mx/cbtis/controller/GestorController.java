@@ -235,6 +235,10 @@ public class GestorController {
 		} catch (HttpClientErrorException.Unauthorized ex) {
 			return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
 		} catch (RestClientException ex) {
+            org.slf4j.LoggerFactory.getLogger(GestorController.class).warn(
+                "Fallo al conectar con API {}: tipo={}, causa={}", apiBaseUrl,
+                ex.getClass().getSimpleName(),
+                ex.getCause() == null ? "sin causa" : ex.getCause().getClass().getSimpleName());
 			return ResponseEntity.status(HttpStatus.BAD_GATEWAY).build();
 		}
 

@@ -1,6 +1,8 @@
 package com.mx.cbtis.controller;
 
 import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.ArgumentMatchers.any;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mockConstruction;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -8,6 +10,9 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import org.junit.jupiter.api.Test;
+import org.mockito.ArgumentCaptor;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.test.web.servlet.MockMvc;
@@ -23,10 +28,12 @@ class DeploymentConfigurationTests {
     void enviaLaConsultaAlServidorConfigurado() throws Exception {
         try (var http = mockConstruction(RestTemplate.class, (mock, context) ->
             when(mock.postForObject(eq("https://api.example.invalid/buscarProyectos"),
-                eq(null), eq(Proyectos[].class))).thenReturn(new Proyectos[0]))) {
+                any(HttpHeaders.class), eq(Proyectos[].class))).thenReturn(new Proyectos[0]))) {
             mvc.perform(post("/consultarProyectos")).andExpect(status().isOk());
+            var headers = ArgumentCaptor.forClass(HttpHeaders.class);
             verify(http.constructed().get(0)).postForObject(
-                "https://api.example.invalid/buscarProyectos", null, Proyectos[].class);
+                eq("https://api.example.invalid/buscarProyectos"), headers.capture(), eq(Proyectos[].class));
+            assertEquals(MediaType.APPLICATION_JSON, headers.getValue().getContentType());
         }
     }
 }
