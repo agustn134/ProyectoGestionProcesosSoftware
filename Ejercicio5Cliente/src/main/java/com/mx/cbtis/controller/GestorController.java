@@ -223,7 +223,10 @@ public class GestorController {
 	@PostMapping("/verificarLogin")
 	public ResponseEntity<Usuario> verificarUsuario(@RequestBody Usuario paramUser) {
 		String urlservicebd = apiBaseUrl + "/getUsuarioLogin";
-		RestTemplate  template = new RestTemplate();
+        var requestFactory = new org.springframework.http.client.SimpleClientHttpRequestFactory();
+        requestFactory.setConnectTimeout(10_000);
+        requestFactory.setReadTimeout(90_000);
+		RestTemplate template = new RestTemplate(requestFactory);
 		try {
 			ResponseEntity<Usuario> response = template.postForEntity(urlservicebd,paramUser,Usuario.class);
 			Usuario usuario = response.getBody();
@@ -239,7 +242,10 @@ public class GestorController {
                 "Fallo al conectar con API {}: tipo={}, causa={}", apiBaseUrl,
                 ex.getClass().getSimpleName(),
                 ex.getCause() == null ? "sin causa" : ex.getCause().getClass().getSimpleName());
-			return ResponseEntity.status(HttpStatus.BAD_GATEWAY).build();
+            return ResponseEntity.status(HttpStatus.BAD_GATEWAY)
+                .header("X-Api-Failure", ex.getClass().getSimpleName())
+                .header("X-Api-Cause", ex.getCause() == null ? "none" : ex.getCause().getClass().getSimpleName())
+                .build();
 		}
 
 	}
