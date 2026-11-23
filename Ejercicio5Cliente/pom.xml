@@ -44,6 +44,27 @@
 	</dependencies>
 	
 	<build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <excludes>
+                    <exclude>static/Images/animacion1.gif</exclude>
+                    <exclude>static/Images/animacion10.gif</exclude>
+                    <exclude>static/Images/animacion2.gif</exclude>
+                    <exclude>static/Images/animacion3.gif</exclude>
+                    <exclude>static/Images/animacion4.gif</exclude>
+                    <exclude>static/Images/animacion6.gif</exclude>
+                    <exclude>static/Images/animacion7.gif</exclude>
+                    <exclude>static/Images/animacion9.gif</exclude>
+                    <exclude>static/Images/fondo.gif</exclude>
+                    <exclude>static/Images/fondo.png</exclude>
+                    <exclude>static/Images/fondo1.png</exclude>
+                    <exclude>static/Images/fondoLogin.gif</exclude>
+                    <exclude>static/Images/hola.gif</exclude>
+                </excludes>
+            </resource>
+        </resources>
+
 		<plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
