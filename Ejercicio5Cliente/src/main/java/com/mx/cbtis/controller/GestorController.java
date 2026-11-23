@@ -234,7 +234,7 @@ public class GestorController {
 				return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
 			}
 			usuario.setContrasena(null);
-			return response;
+			return ResponseEntity.ok(usuario);
 		} catch (HttpClientErrorException.Unauthorized ex) {
 			return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
 		} catch (RestClientException ex) {
@@ -242,10 +242,7 @@ public class GestorController {
                 "Fallo al conectar con API {}: tipo={}, causa={}", apiBaseUrl,
                 ex.getClass().getSimpleName(),
                 ex.getCause() == null ? "sin causa" : ex.getCause().getClass().getSimpleName());
-            return ResponseEntity.status(HttpStatus.BAD_GATEWAY)
-                .header("X-Api-Failure", ex.getClass().getSimpleName())
-                .header("X-Api-Cause", ex.getCause() == null ? "none" : ex.getCause().getClass().getSimpleName())
-                .build();
+            return ResponseEntity.status(HttpStatus.BAD_GATEWAY).build();
 		}
 
 	}
