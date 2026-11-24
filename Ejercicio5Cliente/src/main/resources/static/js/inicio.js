@@ -1,7 +1,12 @@
+let campoFondoActual = "fondo";
+function mostrarFondos(campo = "fondo") {
+    campoFondoActual = campo;
+    document.getElementById("imagenesFondo").showModal();
+}
 // La lista inicial se renderiza en el servidor mediante Thymeleaf.
 function guardarRutaImagen(imagePath) {
-	document.getElementById("fondo").value = imagePath;
-	console.log(document.getElementById("fondo").value);
+	document.getElementById(campoFondoActual).value = imagePath;
+    cerrarFondos();
 }
 
 function eliminarProyecto(idProyecto){
@@ -37,7 +42,7 @@ function actualizarProyecto(idProyecto){
 		data : JSON.stringify({id_proyecto: idProyecto}),
 		type : "POST",
 		success: function(data){
-			$('#modalEditar').modal('show');
+			bootstrap.Modal.getOrCreateInstance(document.getElementById('modalEditar')).show();
 			
 			var modal = $('#modalEditar');
 			modal.find('.modal-title').text('Editar')
@@ -67,9 +72,9 @@ function asignarFondo(){
 }
 
 function asignarFondoEditar(){
-	console.log(document.getElementById("editarFondo").value);
-	if(document.getElementById("editarFondo").value == ""){
-		document.getElementById("editarFondo").value = "/Images/blanco.png";
+	console.log(document.getElementById("editar_fondo").value);
+	if(document.getElementById("editar_fondo").value == ""){
+		document.getElementById("editar_fondo").value = "/Images/blanco.png";
 	}
 }
 

@@ -1,0 +1,17 @@
+target
+.git
+.env
+*.log
+src/main/resources/static/Images/animacion1.gif
+src/main/resources/static/Images/animacion10.gif
+src/main/resources/static/Images/animacion2.gif
+src/main/resources/static/Images/animacion3.gif
+src/main/resources/static/Images/animacion4.gif
+src/main/resources/static/Images/animacion6.gif
+src/main/resources/static/Images/animacion7.gif
+src/main/resources/static/Images/animacion9.gif
+src/main/resources/static/Images/fondo.gif
+src/main/resources/static/Images/fondo.png
+src/main/resources/static/Images/fondo1.png
+src/main/resources/static/Images/fondoLogin.gif
+src/main/resources/static/Images/hola.gif

@@ -1,0 +1,179 @@
+{
+  "tool": "comprobaciones-locales-ci",
+  "version": "1.0",
+  "scope": [
+    "Ejercicio5MyAPIGestor"
+  ],
+  "limitations": "Tres reglas explícitas; no reemplaza SAST, SCA ni revisión manual.",
+  "exclusions": [
+    ".git",
+    ".idea",
+    ".tools",
+    "ci-reports",
+    "entrega-unidad2",
+    "practica-3",
+    "target"
+  ],
+  "omittedDirectoriesObserved": [
+    "target"
+  ],
+  "scannedFiles": [
+    {
+      "path": "Ejercicio5MyAPIGestor/src/main/java/com/mx/cbtis/gestor/Ejercicio5MyApiGestorApplication.java",
+      "sha256": "237b4648f91a1444d9550f1d54102c9acb34464d41dd7bbecd588558429b0076"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/main/java/com/mx/cbtis/gestor/controller/ApiExceptionHandler.java",
+      "sha256": "913674b2acf755b98f1ea2fd655eccc94578b1edccd002c990797a87cee122c7"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/main/java/com/mx/cbtis/gestor/controller/AsignacionesController.java",
+      "sha256": "20cca3294cace6ebd7f2fdd986aa563ba9de3782fe89d25e276e05fb944454fb"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/main/java/com/mx/cbtis/gestor/controller/ComentariosController.java",
+      "sha256": "c6c3fdc976172ecf4e81ace29b6be3070006603b78891b2285b619d10cc2d96f"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/main/java/com/mx/cbtis/gestor/controller/ProyectosController.java",
+      "sha256": "3b7e9594c88b5bdbc86a749ac62d1b6850f2dba0463b9fec971b8cc4a7ee54f4"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/main/java/com/mx/cbtis/gestor/controller/TareasController.java",
+      "sha256": "2ca079742df8817462ef0cb7acbbda26f21359d8d9328cdf213ff6e15c880f16"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/main/java/com/mx/cbtis/gestor/controller/UsuarioController.java",
+      "sha256": "7c2fb4fad6d30ff2e5168d9bd178c867048b53d853f2973928b802a9365c132d"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/main/java/com/mx/cbtis/gestor/dto/AsignacionIdRequest.java",
+      "sha256": "b19d78deae533a13e81635d49fd8b76a6b23ead0b0cee4b49835bb306d6b947c"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/main/java/com/mx/cbtis/gestor/dto/AsignacionRequest.java",
+      "sha256": "e837d6700532971683be6bf4d5e5789c830aaca027beab0f5dc1613a3c408e88"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/main/java/com/mx/cbtis/gestor/dto/ComentarioIdRequest.java",
+      "sha256": "51e5f2f2c6d00b41e182cfdaa1418097f8462bec143a3cb7c0f773074069b7e6"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/main/java/com/mx/cbtis/gestor/dto/ComentarioRequest.java",
+      "sha256": "2d9f028603de22ea0899cb120c326f610607534a4d96a893f1a1aca77e78f537"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/main/java/com/mx/cbtis/gestor/dto/LoginRequest.java",
+      "sha256": "6ec4ff0afa1005a5fe53824df32e54f2cb4d4dc6179c76b01c6f3db278dd114e"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/main/java/com/mx/cbtis/gestor/dto/ProyectoFiltroRequest.java",
+      "sha256": "c29d6c8c15e389c2bc563c18a3f7e18d450c2a9414ed59d5ba8afbd98d705fb0"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/main/java/com/mx/cbtis/gestor/dto/ProyectoIdRequest.java",
+      "sha256": "9be53e2774cb77119625796e7823a0765626ab10dc2916e984a3fc33ebcf2d7e"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/main/java/com/mx/cbtis/gestor/dto/ProyectoRequest.java",
+      "sha256": "4f3bfc0e9ab0799adfec224c01bc743acb559cd81782d3eb904531da5f5d7644"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/main/java/com/mx/cbtis/gestor/dto/TareaFiltroRequest.java",
+      "sha256": "aa2b1fa3516dc3b1f63115628a3b4a080f5601d2c5ed5f3bc75c91743acde326"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/main/java/com/mx/cbtis/gestor/dto/TareaIdRequest.java",
+      "sha256": "050125c33649b020095f554c502aa03f867a57fc42dd17d87a011c860fca1a00"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/main/java/com/mx/cbtis/gestor/dto/TareaRequest.java",
+      "sha256": "1723ee637167c0f948844452bde843dc613c77b06686cc8e841a7e8a1b2fa960"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/main/java/com/mx/cbtis/gestor/dto/UsuarioIdRequest.java",
+      "sha256": "4d9f979d57be59cb6c307291db9be1daf3a8ef2f3afa3a37cd5ee08e81451bdc"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/main/java/com/mx/cbtis/gestor/dto/UsuarioRequest.java",
+      "sha256": "5a4eb1aa5a0566ae35dc591f015181c160bc8a6e53c6e88b99c084e04dd485a1"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/main/java/com/mx/cbtis/gestor/modelo/Asignaciones.java",
+      "sha256": "9ff2e33595e3b6c8a85457254871ebfdf9c720d9b4b689bd5fd066b73a27fd67"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/main/java/com/mx/cbtis/gestor/modelo/Comentarios.java",
+      "sha256": "fd66fe4b23a31511477f980b885918d3355ce36c8977149b505f2c7cdb3d6d69"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/main/java/com/mx/cbtis/gestor/modelo/Proyectos.java",
+      "sha256": "70353267ba1d4286bbb8f6b057827bcbdc70b35a4b6368311f941639356c536a"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/main/java/com/mx/cbtis/gestor/modelo/Tareas.java",
+      "sha256": "bb693c4fbf2bead31ca9312445d5b4255e8440c06fa1d89f04c46c4d37506f42"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/main/java/com/mx/cbtis/gestor/modelo/Usuario.java",
+      "sha256": "0043505a439b8dfdce387b4cd874a220297ee1851f763899d2a82c9bb6fc3f7c"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/main/java/com/mx/cbtis/gestor/repository/AsignacionesRepository.java",
+      "sha256": "9a5ccf5fb05445a26a5dc75d4e87cdd70d11e7896840dd9e4beba5a4b25ab9df"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/main/java/com/mx/cbtis/gestor/repository/ComentariosRepository.java",
+      "sha256": "ea519962f647730dcc1af178afa9efade18ab16174e3d0ee349aff3109765610"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/main/java/com/mx/cbtis/gestor/repository/ProtectosRepository.java",
+      "sha256": "e07c5370d269316c7edbcc46dc971932e4216686ca310aadbda2d7621a7c1835"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/main/java/com/mx/cbtis/gestor/repository/TareasRepository.java",
+      "sha256": "7ec430b4006c4d4589b8849709dff2986f6625fc6ac4c10bd6bd89f17215ff9e"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/main/java/com/mx/cbtis/gestor/repository/UsuarioRepository.java",
+      "sha256": "0cf2599875968f02d77ce76c43e0ee40f733965fcaaa2654be585ddc2dc2a192"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/main/java/com/mx/cbtis/gestor/service/PasswordService.java",
+      "sha256": "b5088701cbb4246a5a438c1fd539db45572da209b5b19fac94a6dbb8a45a209c"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/main/resources/application.properties",
+      "sha256": "ed59a137857d4902c66aaadac24e21d4e6a3c9fb7011352bb71a646e0ad38083"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/test/java/com/mx/cbtis/gestor/Ejercicio5MyApiGestorApplicationTests.java",
+      "sha256": "f8c20ef4e88f235e6fa8a84f5821c18c634321e3c7dfa0ff4616cb3319f8a46f"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/test/java/com/mx/cbtis/gestor/controller/ApiCrudTests.java",
+      "sha256": "d8508c5c6a5bfa23412e4a08917714294c160d858657d18527926c164031ccf2"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/test/java/com/mx/cbtis/gestor/controller/ProyectosControllerTests.java",
+      "sha256": "8d09e8b728fb0f661b7524b6063eab573ee21f47f9333092bf20037daf0adf68"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/test/java/com/mx/cbtis/gestor/controller/UsuarioSecurityTests.java",
+      "sha256": "13baa0cbbca2872b7ff00e386b827a3c8d253e1813a4903d2bc6b96177f19913"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/test/java/com/mx/cbtis/gestor/modelo/JsonContractTests.java",
+      "sha256": "ec6e0ea315ec36a12b52af79c4478e2cb3ab23ca12edf2214559003ee3e166d5"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/test/java/com/mx/cbtis/gestor/service/PasswordServiceTests.java",
+      "sha256": "932738474a0faecc202cc7ba3bf8faf7bae781de13f171676c3331da131a0ffa"
+    },
+    {
+      "path": "Ejercicio5MyAPIGestor/src/test/resources/application-test.properties",
+      "sha256": "1c4ed39a329fa3cebda013ca90dbb6d331ccc27e583b2df4f26c07518d5b9a93"
+    }
+  ],
+  "findings": []
+}

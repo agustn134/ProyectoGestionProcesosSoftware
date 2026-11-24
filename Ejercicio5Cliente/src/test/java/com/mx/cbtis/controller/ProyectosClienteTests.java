@@ -71,6 +71,51 @@ class ProyectosClienteTests {
         }
     }
 
+    @Test @DisplayName("Editar conserva el ID y el fondo y usa updateProyecto, sin crear otro proyecto")
+    void editarProyectoExistente() throws Exception {
+        try (MockedConstruction<RestTemplate> http = mockConstruction(RestTemplate.class,
+            (mock, context) -> when(mock.postForEntity(eq("http://localhost:8081/updateProyecto"),
+                any(Proyectos.class), eq(Integer.class))).thenReturn(ResponseEntity.ok(1)))) {
+            mvc.perform(post("/saveProyecto").param("id_proyecto", "9001")
+                .param("nombre", "Proyecto editado").param("descripcion", "Cambio guardado")
+                .param("fecha_inicio", "2026-11-23").param("fecha_finalizacion", "2026-11-30")
+                .param("estado_proyecto", "Finalizado").param("fondo", "/Images/azulReal.png"))
+                .andExpect(status().is3xxRedirection()).andExpect(redirectedUrl("/inicio"));
+            verify(http.constructed().getFirst()).postForEntity(eq("http://localhost:8081/updateProyecto"),
+                argThat((Proyectos p) -> Integer.valueOf(9001).equals(p.getId_proyecto())
+                    && "Proyecto editado".equals(p.getNombre())
+                    && "Finalizado".equals(p.getEstado_proyecto())
+                    && "/Images/azulReal.png".equals(p.getFondo())), eq(Integer.class));
+            verifyNoMoreInteractions(http.constructed().getFirst());
+        }
+    }
+
+    @Test @DisplayName("Un ID inválido no se convierte en un alta")
+    void editarIdInvalido() throws Exception {
+        try (MockedConstruction<RestTemplate> http = mockConstruction(RestTemplate.class)) {
+            mvc.perform(post("/saveProyecto").param("id_proyecto", "0"))
+                .andExpect(status().isBadRequest())
+                .andExpect(model().attribute("errorProyecto", "El ID del proyecto debe ser positivo."));
+            assertTrue(http.constructed().isEmpty());
+        }
+    }
+
+    @Test @DisplayName("Editar un proyecto eliminado informa 404 sin intentar crearlo")
+    void editarProyectoEliminado() throws Exception {
+        try (MockedConstruction<RestTemplate> http = mockConstruction(RestTemplate.class,
+            (mock, context) -> when(mock.postForEntity(eq("http://localhost:8081/updateProyecto"),
+                any(Proyectos.class), eq(Integer.class))).thenThrow(
+                    org.springframework.web.client.HttpClientErrorException.create(
+                        HttpStatus.NOT_FOUND, "Not found", HttpHeaders.EMPTY, new byte[0], null)))) {
+            mvc.perform(post("/saveProyecto").param("id_proyecto", "9001")
+                .param("nombre", "Proyecto editado").param("descripcion", "Cambio")
+                .param("fecha_inicio", "2026-11-23").param("fecha_finalizacion", "2026-11-30")
+                .param("estado_proyecto", "En proceso"))
+                .andExpect(status().isNotFound())
+                .andExpect(model().attribute("errorProyecto", "El proyecto ya no existe. Actualiza la lista antes de continuar."));
+        }
+    }
+
     @Test @DisplayName("AUT-F01: error del backend se controla y comunica")
     void errorBackendControlado() throws Exception {
         try (MockedConstruction<RestTemplate> http = mockConstruction(RestTemplate.class,

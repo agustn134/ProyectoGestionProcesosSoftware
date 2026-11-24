@@ -1,0 +1,27 @@
+{
+  "tool": "comprobaciones-locales-ci",
+  "version": "1.0",
+  "scope": [
+    "db-tests"
+  ],
+  "limitations": "Tres reglas explícitas; no reemplaza SAST, SCA ni revisión manual.",
+  "exclusions": [
+    ".git",
+    ".idea",
+    ".tools",
+    "ci-reports",
+    "entrega-unidad2",
+    "practica-3",
+    "target"
+  ],
+  "omittedDirectoriesObserved": [
+    "target"
+  ],
+  "scannedFiles": [
+    {
+      "path": "db-tests/src/test/java/com/mx/cbtis/ci/DatabaseSchemaTests.java",
+      "sha256": "082e089a316d05980d9f54599af3f99e1385213173fcfb018579bb6c29091d68"
+    }
+  ],
+  "findings": []
+}

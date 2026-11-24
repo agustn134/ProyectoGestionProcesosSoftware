@@ -1,0 +1,27 @@
+{
+  "scope": "Revisión contextual explícita; no elimina los avisos del reporte OSV ni declara corregida la biblioteca",
+  "expires": "2026-12-07",
+  "requiredPassingTest": "contextoSeguroSinSseNiXslt",
+  "rules": [
+    {
+      "id": "GHSA-j9f9-w8pj-32f8",
+      "alias": "CVE-2026-47890",
+      "package": "org.springframework:spring-webmvc",
+      "version": "6.2.19",
+      "vendorSeverity": "LOW",
+      "reference": "https://spring.io/security/cve-2026-47890/",
+      "reason": "No se envían fragmentos de vista por SSE. Se verifica ausencia en fuente y en el contexto MVC probado. La versión sigue dentro del rango afectado.",
+      "futureAction": "Antes de introducir SSE/fragmentos, migrar a Spring 7.0.9+ o incorporar el mantenimiento 6.2.20 de soporte comercial; revisar al vencer."
+    },
+    {
+      "id": "GHSA-pc63-qcmh-9cmg",
+      "alias": "CVE-2026-47884",
+      "package": "org.springframework:spring-webmvc",
+      "version": "6.2.19",
+      "vendorSeverity": "MEDIUM",
+      "reference": "https://spring.io/security/cve-2026-47884/",
+      "reason": "No existe XsltView/XsltViewResolver ni un handler /** que deduzca el nombre de vista de la solicitud. Se comprueba en fuente y contexto MVC. La versión sigue afectada.",
+      "futureAction": "Antes de habilitar XSLT o mappings amplios, migrar a Spring 7.0.9+ o mantenimiento comercial 6.2.20; revisar al vencer."
+    }
+  ]
+}

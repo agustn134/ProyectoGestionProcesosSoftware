@@ -1,0 +1,39 @@
+services:
+  db:
+    image: mariadb:11.4-noble
+    environment:
+      MARIADB_DATABASE: dbgestor
+      MARIADB_USER: gestor
+      MARIADB_PASSWORD: ${DB_PASSWORD:?Define DB_PASSWORD}
+      MARIADB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:?Define DB_ROOT_PASSWORD}
+    volumes:
+      - despliegue_data:/var/lib/mysql
+      - ./db/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+  api:
+    image: gestion-procesos-api:java21
+    build: ./Ejercicio5MyAPIGestor
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mariadb://db:3306/dbgestor
+      SPRING_DATASOURCE_USERNAME: gestor
+      DB_PASSWORD: ${DB_PASSWORD:?Define DB_PASSWORD}
+    ports:
+      - "127.0.0.1:8081:8081"
+    depends_on:
+      db:
+        condition: service_healthy
+  frontend:
+    image: gestion-procesos-frontend:java21
+    build: ./Ejercicio5Cliente
+    environment:
+      API_BASE_URL: http://api:8081
+    ports:
+      - "127.0.0.1:8080:8080"
+    depends_on:
+      - api
+volumes:
+  despliegue_data:

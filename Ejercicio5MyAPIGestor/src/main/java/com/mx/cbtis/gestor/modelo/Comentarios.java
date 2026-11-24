@@ -2,19 +2,22 @@ package com.mx.cbtis.gestor.modelo;
 
 import java.time.LocalDateTime;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Column;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
 public class Comentarios {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id_comentario;
+	@Column(length = 100)
 	private String id_usuario;
 	private Integer id_tarea;
+	@Column(length = 250)
 	private String texto_comentario;
 	private LocalDateTime fecha_hora;
 	

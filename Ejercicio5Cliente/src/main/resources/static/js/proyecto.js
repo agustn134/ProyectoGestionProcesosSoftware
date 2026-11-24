@@ -83,6 +83,8 @@ $(document).ready(function() {
             	var lateral1 = `
 	            	<button type="button" class="btn btn-light text-start d-grid gap-2 dropdown-item" data-bs-toggle="modal" data-bs-target="#editarTarea" onclick="actualizarTarea(${tarea.id_tarea});comentarios(${tarea.id_tarea})">${tarea.nombre}</button>
             	`;
+                contenedor.append(tarjeta);
+                contenedorLateral1.append(lateral1);
             	
             	
             	
@@ -131,6 +133,8 @@ $(document).ready(function() {
             	var lateral2 = `
 	            	<button type="button" class="btn btn-light text-start d-grid gap-2 dropdown-item" data-bs-toggle="modal" data-bs-target="#editarTarea" onclick="actualizarTarea(${tarea.id_tarea});comentarios(${tarea.id_tarea})">${tarea.nombre}</button>
             	`;
+                contenedor2.append(tarjeta2);
+                contenedorLateral2.append(lateral2);
             	
             	// Crea comentarios
 		     /* $.ajax({
@@ -176,6 +180,8 @@ $(document).ready(function() {
 	            var lateral3 = `
 	            	<button type="button" class="btn btn-light text-start d-grid gap-2 dropdown-item" data-bs-toggle="modal" data-bs-target="#editarTarea" onclick="actualizarTarea(${tarea.id_tarea});comentarios(${tarea.id_tarea})">${tarea.nombre}</button>
             	`;
+                contenedor3.append(tarjeta3);
+                contenedorLateral3.append(lateral3);
 	            
 	            // Crea comentarios
 		       /*$.ajax({
@@ -205,13 +211,7 @@ $(document).ready(function() {
 		   }
             
             
-            contenedor.append(tarjeta);
-            contenedor2.append(tarjeta2);
-            contenedor3.append(tarjeta3);
             
-            contenedorLateral1.append(lateral1);
-            contenedorLateral2.append(lateral2);
-            contenedorLateral3.append(lateral3);
 
           });
 		},
@@ -283,65 +283,44 @@ function Fechas(){
 	}
 }
 
-function validarTarea(){
-	
-	var urlParams = new URLSearchParams(window.location.search);
-	var id = urlParams.get('id_proyecto');
-	var id_proyecto = Number(id);
-	console.log(id_proyecto);
-
-	$.ajax({
-		url : "/verificarTarea",
-		contentType:"application/json",
-		data : JSON.stringify({nombre:$("#inputTarea").val(), lista:$("#estado").val(), id_proyecto: id_proyecto}),
-		type : "POST",
-		success: function(data){
-			console.log(data);
-            var id = document.getElementById("IdProyectoURL").value;
-			var url = `proyecto?id_proyecto=${id}`;
-            window.location.href= url;}
-	})
+function validarTarea() {
+    guardarTareaRapida("#inputTarea", "#estado");
 }
 
-function validarTarea2(){
-	
-	var urlParams = new URLSearchParams(window.location.search);
-	var id = urlParams.get('id_proyecto');
-	var id_proyecto = Number(id);
-	console.log(id_proyecto);
-	
-	$.ajax({
-		url : "/verificarTarea",
-		contentType:"application/json",
-		data : JSON.stringify({nombre:$("#inputTarea2").val(), lista:$("#estado2").val(), id_proyecto: id_proyecto}),
-		type : "POST",
-		success: function(data){
-			console.log(data);
-            var id = document.getElementById("IdProyectoURL").value;
-			var url = `proyecto?id_proyecto=${id}`;
-            window.location.href= url;}
-	})
+function validarTarea2() {
+    guardarTareaRapida("#inputTarea2", "#estado2");
 }
-function validarTarea3(){
-	
-	var urlParams = new URLSearchParams(window.location.search);
-	var id = urlParams.get('id_proyecto');
-	var id_proyecto = Number(id);
-	console.log(id_proyecto);
-	
-	console.log(id);
-	
-	$.ajax({
-		url : "/verificarTarea",
-		contentType:"application/json",
-		data : JSON.stringify({nombre:$("#inputTarea3").val(), lista:$("#estado3").val(), id_proyecto: id_proyecto}),
-		type : "POST",
-		success: function(data){
-			console.log(data);
-            var id = document.getElementById("IdProyectoURL").value;
-			var url = `proyecto?id_proyecto=${id}`;
-            window.location.href= url;}
-	})
+
+function validarTarea3() {
+    guardarTareaRapida("#inputTarea3", "#estado3");
+}
+
+function guardarTareaRapida(campo, columna) {
+    const nombre = $(campo).val().trim();
+    const idProyecto = Number(new URLSearchParams(location.search).get("id_proyecto"));
+    if (!nombre || nombre.length > 100 || !Number.isSafeInteger(idProyecto) || idProyecto <= 0) {
+        alert("Escribe un nombre de hasta 100 caracteres y abre un proyecto válido.");
+        return;
+    }
+    const hoy = new Date();
+    const fecha = [hoy.getFullYear(), hoy.getMonth() + 1, hoy.getDate()]
+        .map(parte => String(parte).padStart(2, "0")).join("-");
+    const boton = $(campo).siblings("button");
+    boton.prop("disabled", true);
+    $.ajax({
+        url: "/verificarTarea",
+        type: "POST",
+        contentType: "application/json",
+        data: JSON.stringify({
+            nombre, descripcion: nombre, fecha_vencimiento: fecha,
+            estado: "primary", lista: $(columna).val(), id_proyecto: idProyecto
+        }),
+        success: function() { location.reload(); },
+        error: function() {
+            boton.prop("disabled", false);
+            alert("No se pudo guardar la tarea. Revisa los datos e intenta nuevamente.");
+        }
+    });
 }
 
 function eliminarTarea(id_tarea){
