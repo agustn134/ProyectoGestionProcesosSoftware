@@ -1,0 +1,37 @@
+{
+  "checkedAtUtc": "2026-11-23T21:06:52.000201+00:00",
+  "frontend": "https://gestion-procesos-frontend.onrender.com",
+  "checks": [
+    {
+      "check": "login desde cliente a API y TiDB",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "check": "cliente no devuelve el valor de la contrasena",
+      "passed": true
+    },
+    {
+      "check": "clave incorrecta rechazada por cliente",
+      "status": 401,
+      "passed": true
+    },
+    {
+      "check": "consulta de proyectos desde cliente a TiDB",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "check": "registro mediante formulario del cliente y redireccion a login",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "check": "login de cuenta creada mediante formulario",
+      "status": 200,
+      "passed": true
+    }
+  ],
+  "projectCount": 0,
+  "syntheticDataOnly": true
+}

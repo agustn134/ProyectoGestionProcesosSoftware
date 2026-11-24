@@ -9,3 +9,4 @@ practica-3/parte-1/** -text
 ci/*.sh text eol=lf
 ci/*.py text eol=lf
 practica-3/parte-2/** -text
+despliegue/** -text

@@ -1,0 +1,39 @@
+{
+  "checkedAtUtc": "2026-11-24T00:04:00.908058+00:00",
+  "method": "Formulario real controlado en navegador; árbol de accesibilidad y propiedades DOM de imágenes",
+  "deployedCommit": "61ff7301c5e601a7916df2d71b54be70e81d2b44",
+  "projectId": 30001,
+  "projectName": "QA_EDICION_VERIFICADA",
+  "screenshot": "edicion-proyecto-verificada.png",
+  "checks": [
+    {
+      "name": "El modal carga los datos del proyecto 30001",
+      "passed": true
+    },
+    {
+      "name": "El selector de fondo abre desde editar",
+      "passed": true
+    },
+    {
+      "name": "Guardar vuelve a la lista sin error",
+      "passed": true
+    },
+    {
+      "name": "Nombre y descripción editados aparecen en la tarjeta",
+      "passed": true
+    },
+    {
+      "name": "Se conserva el ID 30001 y una sola tarjeta del proyecto de prueba",
+      "passed": true
+    },
+    {
+      "name": "Los cambios persisten al recargar la página",
+      "passed": true
+    },
+    {
+      "name": "El fondo /Images/morado.png está cargado: complete=true y naturalWidth>0",
+      "passed": true
+    }
+  ],
+  "additionalHttpObservation": "Las solicitudes al cliente confirmaron actualización sin aumentar el número de proyectos. Una descarga HTTP aislada de azulReal.png terminó por desconexión de red y no se contabiliza como aprobada; el fondo morado se verificó cargado en el navegador."
+}

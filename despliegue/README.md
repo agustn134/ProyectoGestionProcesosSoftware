@@ -43,4 +43,4 @@ Cliente: http://localhost:8080. API: http://localhost:8081/healthz. La base de e
 
 La aplicación conserva el límite de autorización CRUD documentado en la Parte 2. Usar datos de demostración. El despliegue no corrige por sí mismo esa limitación ni los avisos de dependencias. Las cuentas heredadas con contraseñas en claro requieren restablecimiento; no se modifican automáticamente.
 
-La documentación final debe anexar URLs efectivas, commit, estado Live, resultado de /healthz y comprobaciones de registro/login. No se declaran esos resultados hasta verificarlos.
+El despliegue quedó verificado: consultar [VALIDACION_DESPLIEGUE.md](VALIDACION_DESPLIEGUE.md) para URLs, commits, estado Live y resultados.
