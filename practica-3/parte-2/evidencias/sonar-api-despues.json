@@ -1,0 +1,165 @@
+﻿{
+    "projectKey":  "ejercicio5-api-parte2",
+    "computeEngine":  {
+                          "queue":  [
+
+                                    ],
+                          "current":  {
+                                          "id":  "69994881-5d85-4bda-a241-5fe7aa782845",
+                                          "type":  "REPORT",
+                                          "componentId":  "2efcaf03-7bdb-4148-b021-2a651f169982",
+                                          "componentKey":  "ejercicio5-api-parte2",
+                                          "componentName":  "Ejercicio5MyAPIGestor-Parte2",
+                                          "componentQualifier":  "TRK",
+                                          "analysisId":  "c07a613c-f8e1-494b-a550-de3de0cda464",
+                                          "status":  "SUCCESS",
+                                          "submittedAt":  "2026-11-09T15:48:49+0000",
+                                          "submitterLogin":  "admin",
+                                          "startedAt":  "2026-11-09T15:48:51+0000",
+                                          "executedAt":  "2026-11-09T15:48:54+0000",
+                                          "executionTimeMs":  3249,
+                                          "hasScannerContext":  true,
+                                          "warningCount":  0,
+                                          "warnings":  [
+
+                                                       ],
+                                          "infoMessages":  [
+
+                                                           ]
+                                      }
+                      },
+    "history":  {
+                    "paging":  {
+                                   "pageIndex":  1,
+                                   "pageSize":  1,
+                                   "total":  2
+                               },
+                    "analyses":  [
+                                     {
+                                         "key":  "c07a613c-f8e1-494b-a550-de3de0cda464",
+                                         "date":  "2026-11-09T15:48:41+0000",
+                                         "events":  [
+                                                        {
+                                                            "key":  "58a1230e-484a-460e-ad13-736376a0a532",
+                                                            "category":  "VERSION",
+                                                            "name":  "0.0.1-SNAPSHOT"
+                                                        }
+                                                    ],
+                                         "projectVersion":  "0.0.1-SNAPSHOT",
+                                         "manualNewCodePeriodBaseline":  false,
+                                         "revision":  "8a6491fe29df05f275c76635fe864edbf750ddb3",
+                                         "detectedCI":  "Jenkins",
+                                         "relativePathFromScmRoot":  "Ejercicio5MyAPIGestor"
+                                     }
+                                 ]
+                },
+    "qualityGate":  {
+                        "projectStatus":  {
+                                              "status":  "OK",
+                                              "conditions":  [
+                                                                 {
+                                                                     "status":  "OK",
+                                                                     "metricKey":  "new_violations",
+                                                                     "comparator":  "GT",
+                                                                     "errorThreshold":  "0",
+                                                                     "actualValue":  "0"
+                                                                 }
+                                                             ],
+                                              "ignoredConditions":  false,
+                                              "period":  {
+                                                             "mode":  "PREVIOUS_VERSION",
+                                                             "date":  "2026-11-09T14:12:42+0000"
+                                                         },
+                                              "caycStatus":  "compliant"
+                                          }
+                    },
+    "issues":  {
+                   "total":  1,
+                   "p":  1,
+                   "ps":  500,
+                   "paging":  {
+                                  "pageIndex":  1,
+                                  "pageSize":  500,
+                                  "total":  1
+                              },
+                   "effortTotal":  5,
+                   "issues":  [
+                                  {
+                                      "key":  "92edb561-5726-4942-b469-a08cf204dd40",
+                                      "rule":  "java:S6829",
+                                      "severity":  "MAJOR",
+                                      "component":  "ejercicio5-api-parte2:src/main/java/com/mx/cbtis/gestor/service/PasswordService.java",
+                                      "project":  "ejercicio5-api-parte2",
+                                      "line":  9,
+                                      "hash":  "1146c745282cfe869d40ff9ddfc323e9",
+                                      "textRange":  {
+                                                        "startLine":  9,
+                                                        "endLine":  9,
+                                                        "startOffset":  13,
+                                                        "endOffset":  28
+                                                    },
+                                      "flows":  [
+
+                                                ],
+                                      "status":  "OPEN",
+                                      "message":  "Add @Autowired or @Inject to one of the constructors.",
+                                      "effort":  "5min",
+                                      "debt":  "5min",
+                                      "author":  "agustinparralopez1@gmail.com",
+                                      "tags":  [
+                                                   "spring"
+                                               ],
+                                      "creationDate":  "2026-11-09T13:26:56+0000",
+                                      "updateDate":  "2026-11-09T14:12:42+0000",
+                                      "type":  "CODE_SMELL",
+                                      "scope":  "MAIN",
+                                      "quickFixAvailable":  false,
+                                      "messageFormattings":  [
+
+                                                             ],
+                                      "codeVariants":  [
+
+                                                       ],
+                                      "cleanCodeAttribute":  "CLEAR",
+                                      "cleanCodeAttributeCategory":  "INTENTIONAL",
+                                      "impacts":  [
+                                                      {
+                                                          "softwareQuality":  "MAINTAINABILITY",
+                                                          "severity":  "MEDIUM"
+                                                      },
+                                                      {
+                                                          "softwareQuality":  "RELIABILITY",
+                                                          "severity":  "MEDIUM"
+                                                      }
+                                                  ],
+                                      "issueStatus":  "OPEN",
+                                      "prioritizedRule":  false,
+                                      "fromSonarQubeUpdate":  false,
+                                      "internalTags":  [
+
+                                                       ],
+                                      "linkedTicketStatus":  "NOT_LINKED"
+                                  }
+                              ],
+                   "components":  [
+                                      {
+                                          "key":  "ejercicio5-api-parte2:src/main/java/com/mx/cbtis/gestor/service/PasswordService.java",
+                                          "enabled":  true,
+                                          "qualifier":  "FIL",
+                                          "name":  "PasswordService.java",
+                                          "longName":  "src/main/java/com/mx/cbtis/gestor/service/PasswordService.java",
+                                          "path":  "src/main/java/com/mx/cbtis/gestor/service/PasswordService.java"
+                                      },
+                                      {
+                                          "key":  "ejercicio5-api-parte2",
+                                          "enabled":  true,
+                                          "qualifier":  "TRK",
+                                          "name":  "Ejercicio5MyAPIGestor-Parte2",
+                                          "longName":  "Ejercicio5MyAPIGestor-Parte2"
+                                      }
+                                  ],
+                   "facets":  [
+
+                              ]
+               }
+}

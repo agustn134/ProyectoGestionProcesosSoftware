@@ -1,0 +1,44 @@
+{
+  "checkedAtUtc": "2026-11-23T20:32:28.062548+00:00",
+  "frontend": "https://gestion-procesos-frontend.onrender.com",
+  "api": "https://gestion-procesos-api.onrender.com",
+  "deployedCommit": "256f1ec6903b36b13dcb86e15b8b13c31a89b5bf",
+  "syntheticDataOnly": true,
+  "checks": [
+    {
+      "check": "frontend healthz",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "check": "api healthz",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "check": "pagina inicial",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "check": "registro de cuenta ficticia",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "check": "login valido API",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "check": "JSON sin contrasena y rol Usuario",
+      "passed": true
+    },
+    {
+      "check": "login incorrecto rechazado",
+      "status": 401,
+      "passed": true
+    }
+  ],
+  "accountEmail": "despliegue.f765f424b7@example.invalid"
+}

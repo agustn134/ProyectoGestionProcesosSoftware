@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TareasController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Ejercicio5MyAPIGestor</a> &gt; <a href="index.source.html" class="el_package">com.mx.cbtis.gestor.controller</a> &gt; <span class="el_source">TareasController.java</span></div><h1>TareasController.java</h1><pre class="source lang-java linenums">package com.mx.cbtis.gestor.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+import jakarta.validation.Valid;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
+import com.mx.cbtis.gestor.dto.*;
+import com.mx.cbtis.gestor.modelo.Tareas;
+import com.mx.cbtis.gestor.repository.TareasRepository;
+
+@RestController
+public class TareasController {
+    private final TareasRepository tareastable;
+
+<span class="fc" id="L17">    public TareasController(TareasRepository repository) {</span>
+<span class="fc" id="L18">        this.tareastable = repository;</span>
+<span class="fc" id="L19">    }</span>
+
+    @PostMapping(&quot;/getTarea&quot;)
+    public List&lt;Tareas&gt; getTarea(@Valid @RequestBody ProyectoFiltroRequest request) {
+<span class="fc" id="L23">        return tareastable.findByIdProyecto(request.id_proyecto());</span>
+    }
+
+    @GetMapping(&quot;/buscarTarea&quot;)
+    public Tareas getTarea(@RequestParam int id_tarea) {
+<span class="fc" id="L28">        requireId(id_tarea);</span>
+<span class="fc" id="L29">        return tareastable.findById(id_tarea)</span>
+<span class="fc" id="L30">            .orElseThrow(() -&gt; new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Registro no encontrado.&quot;));</span>
+    }
+
+    @PostMapping(&quot;/addTareas&quot;)
+    public int addTareas(@Valid @RequestBody TareaRequest request) {
+<span class="fc bfc" id="L35" title="All 2 branches covered.">        if (request.id_tarea() != null) {</span>
+<span class="fc" id="L36">            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, &quot;El alta no acepta un ID existente.&quot;);</span>
+        }
+<span class="fc" id="L38">        tareastable.save(request.toEntity());</span>
+<span class="fc" id="L39">        return 1;</span>
+    }
+
+    @PostMapping(&quot;/updateTareas&quot;)
+    public int updateTareas(@Valid @RequestBody TareaRequest request) {
+<span class="fc" id="L44">        requireExisting(request.id_tarea());</span>
+<span class="fc" id="L45">        tareastable.save(request.toEntity());</span>
+<span class="fc" id="L46">        return 1;</span>
+    }
+
+    @DeleteMapping(&quot;/deleteTareas&quot;)
+    public int deleteTareas(@Valid @RequestBody TareaIdRequest request) {
+<span class="fc" id="L51">        requireExisting(request.id_tarea());</span>
+<span class="fc" id="L52">        tareastable.deleteById(request.id_tarea());</span>
+<span class="fc" id="L53">        return 1;</span>
+    }
+
+    @PostMapping(&quot;/buscarTareas&quot;)
+    public List&lt;Tareas&gt; getTareas() {
+<span class="fc" id="L58">        List&lt;Tareas&gt; values = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L59">        tareastable.findAll().forEach(values::add);</span>
+<span class="fc" id="L60">        return values;</span>
+    }
+
+    private void requireExisting(Integer id) {
+<span class="fc" id="L64">        requireId(id);</span>
+<span class="fc bfc" id="L65" title="All 2 branches covered.">        if (!tareastable.existsById(id)) {</span>
+<span class="fc" id="L66">            throw new ResponseStatusException(HttpStatus.NOT_FOUND, &quot;Registro no encontrado.&quot;);</span>
+        }
+<span class="fc" id="L68">    }</span>
+
+    private void requireId(Integer id) {
+<span class="fc bfc" id="L71" title="All 4 branches covered.">        if (id == null || id &lt;= 0) {</span>
+<span class="fc" id="L72">            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, &quot;El ID debe ser positivo.&quot;);</span>
+        }
+<span class="fc" id="L74">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

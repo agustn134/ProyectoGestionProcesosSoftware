@@ -1,0 +1,37 @@
+{
+  "projectKey": "ejercicio5-cliente-parte2",
+  "analysisId": "edaac9c3-66f1-4e1b-b446-a3864c571466",
+  "revision": "8a6491fe29df05f275c76635fe864edbf750ddb3",
+  "revisionEvidence": "SCM del escáner + checkout limpio + ceTaskId del reporte procesado",
+  "processed": "SUCCESS",
+  "qualityGate": {
+    "projectStatus": {
+      "status": "OK",
+      "conditions": [
+        {
+          "status": "OK",
+          "metricKey": "new_violations",
+          "comparator": "GT",
+          "errorThreshold": "0",
+          "actualValue": "0"
+        }
+      ],
+      "ignoredConditions": false,
+      "period": {
+        "mode": "PREVIOUS_VERSION",
+        "date": "2026-11-09T14:16:02+0000"
+      },
+      "caycStatus": "compliant"
+    }
+  },
+  "metrics": {
+    "coverage": "97.9",
+    "bugs": "0",
+    "code_smells": "0",
+    "ncloc": "718",
+    "vulnerabilities": "0",
+    "security_hotspots": "0"
+  },
+  "policy": "Quality Gate OK y cero vulnerabilidades reportadas por Sonar; no demuestra ausencia de todo riesgo",
+  "status": "PASS"
+}

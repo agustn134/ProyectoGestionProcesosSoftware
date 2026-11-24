@@ -1,0 +1,93 @@
+[
+  {
+    "original": "animacion1.gif",
+    "webp": "animacion1.webp",
+    "before": 796978,
+    "after": 6554,
+    "staticFirstFrame": true
+  },
+  {
+    "original": "animacion10.gif",
+    "webp": "animacion10.webp",
+    "before": 13306394,
+    "after": 18260,
+    "staticFirstFrame": true
+  },
+  {
+    "original": "animacion2.gif",
+    "webp": "animacion2.webp",
+    "before": 949650,
+    "after": 10618,
+    "staticFirstFrame": true
+  },
+  {
+    "original": "animacion3.gif",
+    "webp": "animacion3.webp",
+    "before": 1285222,
+    "after": 4722,
+    "staticFirstFrame": true
+  },
+  {
+    "original": "animacion4.gif",
+    "webp": "animacion4.webp",
+    "before": 979735,
+    "after": 8400,
+    "staticFirstFrame": true
+  },
+  {
+    "original": "animacion6.gif",
+    "webp": "animacion6.webp",
+    "before": 1560969,
+    "after": 13856,
+    "staticFirstFrame": true
+  },
+  {
+    "original": "animacion7.gif",
+    "webp": "animacion7.webp",
+    "before": 691975,
+    "after": 37074,
+    "staticFirstFrame": true
+  },
+  {
+    "original": "animacion9.gif",
+    "webp": "animacion9.webp",
+    "before": 29545902,
+    "after": 31538,
+    "staticFirstFrame": true
+  },
+  {
+    "original": "fondo.gif",
+    "webp": "fondo-gif.webp",
+    "before": 74403771,
+    "after": 59908,
+    "staticFirstFrame": true
+  },
+  {
+    "original": "fondo.png",
+    "webp": "fondo-png.webp",
+    "before": 21427124,
+    "after": 113274,
+    "staticFirstFrame": true
+  },
+  {
+    "original": "fondo1.png",
+    "webp": "fondo1.webp",
+    "before": 876999,
+    "after": 45044,
+    "staticFirstFrame": true
+  },
+  {
+    "original": "fondoLogin.gif",
+    "webp": "fondoLogin.webp",
+    "before": 80430644,
+    "after": 63210,
+    "staticFirstFrame": true
+  },
+  {
+    "original": "hola.gif",
+    "webp": "hola.webp",
+    "before": 60740717,
+    "after": 60204,
+    "staticFirstFrame": true
+  }
+]

@@ -1,5 +1,12 @@
 **/target/
 .idea/
 .env
+.env.*
+!.env.example
 *.log
 .DS_Store
+ci-reports/
+__pycache__/
+*.py[cod]
+Entrega-Classroom-Practica3.zip
+DocumentoFinal-Practica3.pdf

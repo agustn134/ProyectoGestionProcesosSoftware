@@ -1,0 +1,55 @@
+{
+  "observedAtUtc": "2026-11-24T00:17:28.051255+00:00",
+  "branch": "featured/despliegue",
+  "services": [
+    {
+      "name": "gestion-procesos-frontend",
+      "url": "https://gestion-procesos-frontend.onrender.com",
+      "serviceId": "srv-dc29v8h42hec739h1d5g",
+      "plan": "Free",
+      "region": "Oregon",
+      "status": "Live",
+      "revision": "61ff7301c5e601a7916df2d71b54be70e81d2b44",
+      "deploy": "https://dashboard.render.com/web/srv-dc29v8h42hec739h1d5g/deploys/dep-dc2d5hmq1p3s73d999l0"
+    },
+    {
+      "name": "gestion-procesos-api",
+      "url": "https://gestion-procesos-api.onrender.com",
+      "serviceId": "srv-dc2a37pksfps73dhns70",
+      "plan": "Free",
+      "region": "Oregon",
+      "status": "Live",
+      "revision": "256f1ec6903b36b13dcb86e15b8b13c31a89b5bf",
+      "deploy": "https://dashboard.render.com/web/srv-dc2a37pksfps73dhns70/deploys/dep-dc2a381ksfps73dhntgg"
+    }
+  ],
+  "unitValidation": [
+    {
+      "module": "Ejercicio5MyAPIGestor",
+      "selectedSuite": false,
+      "passed": 57,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "module": "Ejercicio5Cliente",
+      "selectedSuite": true,
+      "passed": 11,
+      "failed": 0,
+      "skipped": 0
+    }
+  ],
+  "publicChecksPassed": 20,
+  "database": {
+    "provider": "TiDB Cloud Starter",
+    "instance": "gestion-procesos-db",
+    "instanceId": "10995040445681020107",
+    "database": "dbgestor",
+    "region": "AWS us-west-2",
+    "monthlySpendingLimitUsd": 0,
+    "tls": "VERIFY_IDENTITY",
+    "personalDataMigrated": false
+  },
+  "sourceOfServiceStatus": "Estado Live observado en el panel de Render; comprobaciones HTTP adjuntas.",
+  "scope": "57 pruebas API y 11 pruebas seleccionadas del cliente; evidencia histórica Parte 2 separada."
+}

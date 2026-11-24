@@ -34,8 +34,7 @@ function validarLogin(){
 			data : JSON.stringify({correo_electronico: $("#exampleInputEmail1").val(), contrasena:$("#exampleInputPassword1").val()}),
 			type : "POST",
 			success: function(data){
-				console.log(data);
-				if(data.nombre == '000'){
+				if(!data || !data.id_usuario){
 					document.getElementById("exampleInputEmail1").focus();
 					var myToast = document.querySelector('#alerta5');
 					var toast = new bootstrap.Toast(myToast);
@@ -44,6 +43,11 @@ function validarLogin(){
 					localStorage.setItem("usuario", JSON.stringify(data));
 					window.location.href = 'inicio';
 				}
+			},
+			error: function(xhr){
+				localStorage.removeItem("usuario");
+				const alerta = xhr.status === 401 ? '#alerta5' : '#alerta6';
+				new bootstrap.Toast(document.querySelector(alerta)).show();
 			}
 		});
 	}

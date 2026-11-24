@@ -1,0 +1,96 @@
+﻿{
+    "projectKey":  "ejercicio5-cliente-parte2",
+    "computeEngine":  {
+                          "queue":  [
+
+                                    ],
+                          "current":  {
+                                          "id":  "59b09d10-2e02-4296-b95c-43c817112071",
+                                          "type":  "REPORT",
+                                          "componentId":  "9e160ab1-be57-49c1-8096-7954604329ee",
+                                          "componentKey":  "ejercicio5-cliente-parte2",
+                                          "componentName":  "Ejercicio5Cliente-Parte2",
+                                          "componentQualifier":  "TRK",
+                                          "analysisId":  "edaac9c3-66f1-4e1b-b446-a3864c571466",
+                                          "status":  "SUCCESS",
+                                          "submittedAt":  "2026-11-09T15:47:28+0000",
+                                          "submitterLogin":  "admin",
+                                          "startedAt":  "2026-11-09T15:47:29+0000",
+                                          "executedAt":  "2026-11-09T15:47:34+0000",
+                                          "executionTimeMs":  5682,
+                                          "hasScannerContext":  true,
+                                          "warningCount":  0,
+                                          "warnings":  [
+
+                                                       ],
+                                          "infoMessages":  [
+
+                                                           ]
+                                      }
+                      },
+    "history":  {
+                    "paging":  {
+                                   "pageIndex":  1,
+                                   "pageSize":  1,
+                                   "total":  2
+                               },
+                    "analyses":  [
+                                     {
+                                         "key":  "edaac9c3-66f1-4e1b-b446-a3864c571466",
+                                         "date":  "2026-11-09T15:47:20+0000",
+                                         "events":  [
+                                                        {
+                                                            "key":  "5c37e766-a160-498c-9d21-95a7fae32474",
+                                                            "category":  "VERSION",
+                                                            "name":  "0.0.1-SNAPSHOT"
+                                                        }
+                                                    ],
+                                         "projectVersion":  "0.0.1-SNAPSHOT",
+                                         "manualNewCodePeriodBaseline":  false,
+                                         "revision":  "8a6491fe29df05f275c76635fe864edbf750ddb3",
+                                         "detectedCI":  "Jenkins",
+                                         "relativePathFromScmRoot":  "Ejercicio5Cliente"
+                                     }
+                                 ]
+                },
+    "qualityGate":  {
+                        "projectStatus":  {
+                                              "status":  "OK",
+                                              "conditions":  [
+                                                                 {
+                                                                     "status":  "OK",
+                                                                     "metricKey":  "new_violations",
+                                                                     "comparator":  "GT",
+                                                                     "errorThreshold":  "0",
+                                                                     "actualValue":  "0"
+                                                                 }
+                                                             ],
+                                              "ignoredConditions":  false,
+                                              "period":  {
+                                                             "mode":  "PREVIOUS_VERSION",
+                                                             "date":  "2026-11-09T14:16:02+0000"
+                                                         },
+                                              "caycStatus":  "compliant"
+                                          }
+                    },
+    "issues":  {
+                   "total":  0,
+                   "p":  1,
+                   "ps":  500,
+                   "paging":  {
+                                  "pageIndex":  1,
+                                  "pageSize":  500,
+                                  "total":  0
+                              },
+                   "effortTotal":  0,
+                   "issues":  [
+
+                              ],
+                   "components":  [
+
+                                  ],
+                   "facets":  [
+
+                              ]
+               }
+}
