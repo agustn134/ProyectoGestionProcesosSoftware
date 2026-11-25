@@ -218,7 +218,6 @@ Abrir `http://localhost:8080`. Esta instrucción permite utilizar los servicios;
 | Datos de las ejecuciones de Jenkins | [evidencias/jenkins-parte1.json](evidencias/jenkins-parte1.json) |
 | Reportes del cliente | [reportes/cliente/](reportes/cliente/) |
 | Reportes de la API | [reportes/api/](reportes/api/) |
-| Orden de la demostración y guion del video | [GUION_VIDEO.md](GUION_VIDEO.md) |
 | Configuración reproducible de Jenkins | [ci/](https://github.com/agustn134/ProyectoGestionProcesosSoftware/tree/main/ci) |
 
 Para consultar los HTML, descargar el paquete entregable, descomprimirlo conservando su estructura y abrir el `index.html` del reporte correspondiente. GitHub permite inspeccionar los archivos, pero su vista de código no ejecuta el reporte HTML como una página web.

@@ -144,7 +144,6 @@ Las ocho pruebas de base de datos se ejecutaron en MariaDB aislada, sin comparti
 
 - Despliegue: Dockerfiles, composición local, configuración sin secretos, esquemas de base de datos, capturas y comprobaciones públicas.
 
-- Documentación: este informe y su copia en PDF, integrados en Entrega-Classroom-Practica3.zip.
 
 ## Imágenes de la interfaz
 

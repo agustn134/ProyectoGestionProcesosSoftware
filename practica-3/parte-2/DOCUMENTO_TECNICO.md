@@ -2,7 +2,7 @@
 
 ## Alcance y organización
 
-Esta entrega corresponde a la segunda mitad de la práctica: pruebas automatizadas de los métodos evaluables, cobertura verificable, análisis de vulnerabilidades con clasificación y atención, y pipelines independientes de frontend, backend y base de datos. El guion permite demostrar las ejecuciones y explicar lo aprendido; el estudiante debe grabar la demostración.
+Esta entrega corresponde a la segunda mitad de la práctica: pruebas automatizadas de los métodos evaluables, cobertura verificable, análisis de vulnerabilidades con clasificación y atención, y pipelines independientes de frontend, backend y base de datos.
 
 El trabajo se encuentra en `featured/parte-2`. `main` conserva la Parte 1; `develop` se utiliza como punto de integración. Las ramas `featured/parte-1` y `featured/upgrade-java21` conservan referencias del estado entregado. Ver [organización de ramas](https://github.com/agustn134/ProyectoGestionProcesosSoftware/blob/featured/parte-2/RAMAS.md). No se fusionó la Parte 2 automáticamente en las ramas estables.
 
@@ -15,7 +15,6 @@ El trabajo se encuentra en `featured/parte-2`. `main` conserva la Parte 1; `deve
 | Escaneo excluyendo target | 0.20 | Alcance/configuración Sonar, inventarios CycloneDX, OSV y Gitleaks |
 | Clasificación y atención de incidencias | 0.20 | Reportes iniciales, comparación final, correcciones y revisión contextual |
 | Tres pipelines funcionales | 0.40 | Frontend, backend y base CI con resultados y artefactos |
-| Video y explicación del aprendizaje | 0.20 | [Guion para grabar](GUION_VIDEO.md), pantallas y resultados identificados |
 | Total máximo | 1.50 | La calificación la asigna el profesor |
 
 Los resultados concretos, números de build, commits y contadores están en [VALIDACION.md](VALIDACION.md). Esta documentación diferencia objetivos configurados de resultados efectivamente ejecutados.
@@ -103,7 +102,7 @@ El operador aprovisiona el contenedor de CI; el pipeline verifica importación, 
 4. Preparar la base CI conforme a [db-tests](https://github.com/agustn134/ProyectoGestionProcesosSoftware/blob/featured/parte-2/db-tests/README.md).
 5. Ejecutar los tres trabajos y consultar pruebas, reportes y commits de esas mismas ejecuciones.
 
-La [validación final](VALIDACION.md) y el paquete de evidencias identifican los resultados reales. Para abrir JaCoCo HTML, descomprimir el ZIP conservando todos sus recursos. El [guion](GUION_VIDEO.md) indica qué mostrar y qué explicar; no sustituye la grabación del video.
+La [validación final](VALIDACION.md) y el paquete de evidencias identifican los resultados reales. Los reportes HTML de JaCoCo se pueden abrir desde la copia local del repositorio.
 
 
 

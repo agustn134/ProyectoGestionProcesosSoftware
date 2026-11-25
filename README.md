@@ -32,10 +32,10 @@ Adaptación académica del proyecto admin-proyectos de Enrique1189: https://gith
 Los recursos multimedia grandes utilizan Git LFS. Instalar Git LFS antes de clonar; si ya se clonó, ejecutar git lfs install y git lfs pull antes de compilar.
 
 ## Práctica 3, Parte 1
-La entrega específica, los cuatro POM identificados, el documento técnico, los reportes y el guion del video se encuentran en [practica-3/parte-1](practica-3/parte-1/README.md).
+La entrega específica, los cuatro POM identificados, el documento técnico y los reportes se encuentran en [practica-3/parte-1](practica-3/parte-1/README.md).
 
 ## Parte 2 y ramas
-La implementación actual de esta rama es la Parte 2. Consultar [RAMAS.md](RAMAS.md) para main, develop, parte 1, parte 2 y upgrade; y [la entrega Parte 2](practica-3/parte-2/README.md) para pruebas completas, seguridad y los tres pipelines. Descargar [Practica3-Parte2.zip](Practica3-Parte2.zip) para abrir los reportes y el guion del video. Los POM de la Parte 1 son evidencia histórica, no los POM activos de esta rama.
+Esta rama incluye la Parte 2 y el despliegue. Consultar [RAMAS.md](RAMAS.md) para consultar la organización de las ramas; y [la entrega Parte 2](practica-3/parte-2/README.md) para pruebas completas, seguridad y los tres pipelines. Los POM de la Parte 1 son evidencia histórica, no los POM activos de esta rama.
 
 La API utiliza BCrypt: las cuentas heredadas con contraseñas almacenadas en texto plano necesitan restablecimiento. No se migró ni modificó la base de trabajo. Definir DB_PASSWORD en el entorno de la API; ya no se usa una contraseña predeterminada.
 
