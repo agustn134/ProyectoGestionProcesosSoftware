@@ -8,7 +8,6 @@ Entrega de la actualización de los dos servicios a Java 21, configuración de J
 2. Consultar el [estado final de verificación](evidencias/validacion.md) y los [datos de Jenkins](evidencias/jenkins-parte1.json).
 3. Revisar los cuatro POM de la tabla siguiente.
 4. Consultar los reportes de [cliente](reportes/cliente/) y [API](reportes/api/).
-5. Usar el [guion del video](GUION_VIDEO.md) para preparar la demostración.
 
 ## Cuatro POM identificados
 
@@ -38,7 +37,6 @@ La cobertura base de métodos es **24/98 (24.49%) en el cliente** y **20/103 (19
 
 Esta carpeta corresponde a la **Parte 1**, cuyo máximo en la rúbrica es **1.50 puntos**. La Parte 2 contempla tres pipelines, ampliación de pruebas y análisis de seguridad; sus resultados no se afirman aquí. El estado verificable de SonarScanner se documenta por separado en la evidencia final, distinguiendo configuración de ejecución y reporte.
 
-El [guion](GUION_VIDEO.md) presenta un avance de 6–8 minutos de la Parte 1. Antes de grabar, comprobar los números de build, los reportes y los análisis de Sonar identificados en las evidencias. No mostrar contraseñas ni tokens.
 
 
 

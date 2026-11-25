@@ -38,4 +38,4 @@ Se verificó Java 17 en los dos originales, Java 21 en los dos actualizados y co
 El cliente #3 falló en Checkout al intentar instalar hooks de LFS deshabilitados por Jenkins. La corrección se verificó en el cliente #4: `git lfs install --local --skip-repo` seguido de `git lfs pull`. Se comprobaron los cinco archivos completos y sus tamaños dentro del JAR, no solo el resultado de compilación. Consultar [incidencia](incidencia-lfs.md), [estado LFS](lfs-cliente.txt) y [entradas del JAR](jar-recursos-cliente.txt).
 
 ## Alcance pendiente
-Los tres pipelines de la práctica completa (incluido base de datos), las pruebas completas, la cobertura máxima de métodos y la clasificación/atención de seguridad de la Parte 2 no se declaran terminados. El guion adjunto demuestra únicamente la Parte 1 y explica estas limitaciones.
+Los tres pipelines de la práctica completa (incluido base de datos), las pruebas completas, la cobertura máxima de métodos y la clasificación/atención de seguridad de la Parte 2 no se declaran terminados.

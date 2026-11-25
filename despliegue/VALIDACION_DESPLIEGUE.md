@@ -35,7 +35,7 @@ La edición enviaba un ID existente a /addProyecto. Ahora utiliza /updateProyect
 
 Se convirtieron trece recursos: **286,996,080 bytes originales → 472,662 bytes WebP**. Los GIF convertidos utilizan el primer fotograma estático y un máximo de 1920×1080. Se actualizan referencias y se excluyen los originales del JAR. Los dos videos permanecen sin comprimir. [Detalle por archivo](optimizacion-imagenes.json).
 
-[Instrucciones](README.md), [guion del video](GUION_VIDEO_DESPLIEGUE.md), [estado y revisiones](evidencias/servicios.json) y [configuración](configuracion/). El proyecto completo está en [GitHub](https://github.com/agustn134/ProyectoGestionProcesosSoftware/tree/featured/despliegue).
+[Instrucciones](README.md), [estado y revisiones](evidencias/servicios.json) y [configuración](configuracion/). El proyecto completo está en [GitHub](https://github.com/agustn134/ProyectoGestionProcesosSoftware/tree/featured/despliegue).
 
 ## Límites y disponibilidad
 
